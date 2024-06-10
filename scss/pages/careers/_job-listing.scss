@@ -1,0 +1,103 @@
+.job-listing{
+    margin-top: 30vh;
+    h2{
+        position: relative;
+        font-size: 2.8rem;
+        color: $blue;
+        span{
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.7rem;
+            &:after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                height: 3px;
+                background: $blue-btn-text;
+            }
+        }
+    }
+    hr{
+        background: $blue-btn-text;
+        height: 3px;
+        opacity: 1;
+    }
+    .job-row{
+        padding: 2rem 0;
+        .job-title{
+            font-family: $font;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $blue;
+        }
+        .btn{
+            margin-top: 2.5rem;
+            @include mobile{
+                margin-top: 1rem;
+            }
+        }
+        p{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .searchbox{
+        width: 250px;
+        margin-left: auto;
+        padding: 0px;
+        @include mobile{
+            margin: 1rem 0 0 0;
+            width: 100%;    
+        }
+        .search-icon{
+            width: 100%;
+            margin-right: 0.5rem;
+            cursor: pointer;
+            position: relative;
+            @include mobile{
+                margin-right: 0;
+            }
+            button{
+                width: 25px;
+                height: 25px;
+                border: none;
+                background: transparent;
+                position: absolute;
+                right: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+                svg{
+                    width: 100%;
+                    fill: $black;
+                    position: relative;
+                    z-index: 2;
+                    transition: $base-transition;
+                    right: 0;
+                }
+            }
+            .search-input{
+                background: transparent;
+                border: $black solid 1px;
+                border-radius: 11px;
+                padding: 0.5rem 3rem 0.5rem 1rem;
+                font-size: 0.9rem;
+                z-index: 1;
+                width: 100%;
+                display: none;
+                outline: 0;
+            }
+            &.active{
+                svg{
+                    right: 0.5rem;
+                }
+                .search-input{
+                    display: block;
+                }
+            }
+        }
+    }
+}

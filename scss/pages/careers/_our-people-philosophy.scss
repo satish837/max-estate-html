@@ -1,0 +1,38 @@
+.our-people-philosophy{
+    h3{
+        color: $blue;
+        span{
+            display: block;
+        }
+    }
+    .title{
+        font-family: $heading;
+        font-size: 1.3rem;
+        color: $blue-600;
+        margin-bottom: 1rem;
+    }
+    img{
+        border-top-left-radius: 100px;
+    }
+    .text-content{
+        padding-top: 5%;
+        &.pe{
+            padding-right: 5%;
+        }
+        &.ps{
+            padding-left: 5%;
+        }
+        .btn{
+            span{
+                display: flex;
+                align-items: center;
+                width: auto;
+                svg{
+                    width: 20px;
+                    fill: $blue-btn-text;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+}

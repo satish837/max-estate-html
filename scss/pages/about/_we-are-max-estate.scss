@@ -1,0 +1,66 @@
+.we-are-max-estate{
+    padding-top: 100px;
+    padding-bottom: 30vh;
+    position: relative;
+    .image{
+        @include mobile{
+            height: 50vh;
+        }
+        img{
+            width: 100%;
+            border-top-right-radius: 100px;
+            @include mobile{
+                border-top-right-radius: 50px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .text-content{
+        padding: 0 5% 0 2rem;
+        background: $white;
+        @include mobile{
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+        h1{
+            margin-bottom: 1rem;
+            padding-right: 10%;
+            line-height: 1;
+            @include mobile{
+                padding-right: 0;
+            }
+        }
+        .sub-title{
+            max-width: 90%;
+            color: $orange;
+            font-family: $heading;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            background: $white;
+            @include mobile{
+                max-width: 100%;
+            }
+        }
+    }
+    .svg-container{
+        position: absolute;
+        width: 100%;
+        height: 65%;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        text-align: left;
+        padding-left: 23%;
+        @include mobile{
+            overflow: hidden;
+        }
+        svg{
+            height: 100%;
+            path{
+                stroke-width: 3px;
+            }
+        }
+    }
+}

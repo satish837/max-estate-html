@@ -1,0 +1,252 @@
+.philosophy-spotlight{
+    padding-top: 100px;
+    .philosophy-spotlight-video{
+        height: 70vh;
+        position: relative;
+        @include mobile{
+            height: 50vh;
+            margin-bottom: 2rem;
+        }
+        .wrap{
+            margin-left: 10%;
+            height: 100%;
+            width: 90%;
+            position: relative;
+            border-top-right-radius: 100px;
+            overflow: hidden;
+            @include mobile{
+                width: 100%;
+                margin-left: 0;
+            }
+            video{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            .mute-icon{
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                background: url(../img/sound-mute-icon.png) left top no-repeat;
+                background-size: 30px;
+                position: absolute;
+                left: 1rem;
+                top: 1rem;
+                z-index: 2;
+                &.active{
+                    background-position: left -30px;
+                }
+            }
+        }
+        .wave{
+            position: absolute;
+            width: 120px;
+            right: 0;
+            top: 40%;
+            transform: translate(50%, -50%);
+            z-index: 1;
+            @include mobile{
+                transform: translate(15px,-50%);
+            }
+            svg{
+                width: 100%;
+            }
+        }
+    }
+    .philosophy-mobile-slider{
+        &:after{
+            content: 'flickity';
+            display: none;
+            @media screen and ( min-width: 989px ) {
+                content: '';
+            }
+        }
+        @include mobile{
+            margin-bottom: 2rem;
+        }
+        .philosophy-content{
+            padding-left: 2rem;
+            display: none;
+            @include mobile{
+                padding: 0;
+                display: block;
+            }
+            h2{
+                color: $blue;
+            }
+            &:nth-child(1){
+                display: block;
+            }
+        }
+        .flickity-page-dots{
+            bottom: -1rem;
+            pointer-events: none;
+        }
+    }
+    .philosphy-icon-block{
+        width: 95%;
+        margin-top: 3rem;
+        padding: 2rem 0;
+        position: relative;
+        @include mobile{
+            display: none;
+        }
+        .svg-bg{
+            width: 100%;
+            path{
+                stroke: #ffdbc9;
+                stroke-width: 4px;
+            }
+        }
+        .svg-overlay{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 2rem;
+            z-index: 1;
+            path{
+                stroke: $brown;
+                stroke-width: 4px;
+            }
+        }
+        .events-wrap{
+            position: absolute;
+            font-size: 0.8rem;
+            line-height: 1.2;
+            color: rgba($orange, 0.4);
+            cursor: pointer;
+            transition: $base-transition;
+            z-index: 2;
+            @include mobile{
+                display: none;
+            }
+            &.active{
+                color: $brown;
+            }
+            &.event-1{
+                left: 5%;
+                top: 0%;
+            }
+            &.event-2{
+                left: 15%;
+                top: -15%;
+                width: 9%;
+                height: 90%;
+            }
+            &.event-3{
+                left: 25%;
+                top: -15%;
+                width: 9%;
+                height: 90%;
+            }
+            &.event-4{
+                left: 35%;
+                top: -15%;
+                width: 7%;
+                height: 90%;
+            }
+            &.event-5{
+                left: 42%;
+                top: -15%;
+                width: 11%;
+                height: 90%;
+            }
+            &.event-6{
+                left: 54%;
+                top: -15%;
+                width: 9%;
+                height: 90%;
+            }
+            &.event-7{
+                left: 65%;
+                top: -15%;
+                width: 8%;
+                height: 90%;
+            }
+            &.event-8{
+                left: 75%;
+                top: -15%;
+                width: 8%;
+                height: 90%;
+            }
+            &.event-9{
+                left: 84%;
+                top: -15%;
+                width: 8%;
+                height: 90%;
+            }
+            &.event-10{
+                left: 94%;
+                top: -15%;
+                width: 8%;
+                height: 90%;
+            }
+        }
+        .skip-button{
+            position: absolute;
+            cursor: pointer;
+            right: 0.5rem;
+            bottom: -1rem;
+            z-index: 3; 
+            text-align: center;
+            @include mobile{
+                display: none;
+            }
+            .icon{
+                width: 20px;
+                margin: 0 auto;
+                svg{
+                    width: 100%;
+                    path{
+                        fill: $brown;
+                        transition: $base-transition;
+                    }
+                }
+            }
+            .label{ 
+                width: 40px;
+                font-size: 0.65rem;
+                line-height: 1;
+                margin-top: 0.1rem;
+                color: $brown;
+                transition: $base-transition;
+            }
+        }
+    }
+    .philosphy-icon-block-mobile{
+        position: relative;
+        @include desktop{
+            display: none;
+        }
+        @include mobile{
+            margin-top: 3rem;
+        }
+        .svg-bg{
+            width: 100%;
+            display: block;
+            path{
+                stroke: #FFDBC9;
+                stroke-width: 2px;
+                @include mobile{
+                    stroke-width: 4px;
+                }
+            }
+        }
+        .svg-overlay{
+            position: absolute;
+            width: 100%;
+            display: block;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            path{
+                stroke: $brown;
+                stroke-width: 2px;
+                @include mobile{
+                    stroke-width: 4px;
+                }
+            }
+        }
+    }
+}

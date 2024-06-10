@@ -1,0 +1,120 @@
+.static-page-wrap{
+    padding: 2rem 0;
+    .breadcrumb{
+        font-size: 0.8rem;
+        background: #F9F9FF;
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+        a{
+            color: $brown-body-text;
+            text-decoration: none;
+        }
+    }
+    .grid{
+        width: 100%;
+        margin: 1rem 0 0 0;
+        padding: 0px;
+        .no-display{
+            display: none;
+        }
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            li{
+                width: 100%;
+                padding: 0.5rem 0;
+                text-transform: uppercase;
+                border: none;
+                font-weight: 600;
+                @include mobile{
+                    margin-bottom: 1rem;
+                }
+                a{
+                    text-decoration: none;
+                }
+                &:last-child{
+                    border-bottom: none;
+                }
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0px;
+                    padding: 0px;
+                    @include mobile{
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                    }
+                    li{
+                        width: auto;
+                        border-bottom: none;
+                        font-size: 1.125rem;
+                        color: $black;
+                        font-weight: 600;
+                        text-transform: none;
+                        @include mobile{
+                            margin: 0.5rem 0.5rem 0 0rem;
+                            padding: 0.5rem 0;
+                            word-break: break-all;
+                        }
+                        .name{
+                            color: #655C59;
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                        }
+                        .designation, .email, .contact-details{
+                            color: #655C59;
+                            font-size: 1rem;
+                            font-weight: normal;
+                            margin: 0.4rem 0;
+                        }
+                        
+                        &:first-child{
+                            width: 70%;
+                            @include mobile{
+                                width: 100%;
+                                margin:  0;
+                            }
+                        }
+                        a{
+                            display: inline-block;
+                            background: $blue;
+                            color: $white;
+                            text-decoration: none;
+                            padding: 0.5rem 1.5rem;
+                            font-weight: 400;
+                            border-radius: 30px;
+                            font-size: 1rem;
+                            transition: $base-transition;
+                            &:hover{
+                                background: darken($blue, 5);
+                            }
+                        }
+                        select{
+                            padding: 0.5rem 1.5rem;
+                            font-weight: 400;
+                            border-radius: 0.9rem;
+                            font-size: 1rem;
+                            background: transparent;
+                            border: $blue solid 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.loader-pdf{
+    position: absolute;
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    img{
+        width: 30px;
+    }
+}

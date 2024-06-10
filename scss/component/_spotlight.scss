@@ -1,0 +1,44 @@
+.spotlight{
+    height: 100%;
+    @include mobile{
+        height: 100%;
+    }
+    .wrap{
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 11px 11px;
+        video{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .go-down{
+            position: absolute;
+            width: 25px;
+            left: 50%;
+            bottom: 1rem;
+            transform: translate(-50%, 0);
+            z-index: 2;
+            svg{
+                width: 100%;
+                display: block;
+                fill: $white;
+                animation: jumpInfinite 1.5s infinite;
+            }
+            @keyframes jumpInfinite {
+                0% {
+                    margin-bottom: 0;
+                  }
+                  50% {
+                    margin-bottom: 20px;
+                  }
+                  100% {
+                    margin-bottom: 0;
+                  }
+            }
+        }
+    }
+}

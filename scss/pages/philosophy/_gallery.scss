@@ -1,0 +1,37 @@
+.gallery{
+    padding: 5vh 0 50vh 0;
+    position: relative;
+    @include mobile{
+        overflow: hidden;
+    }
+    h2{
+        color: $blue;
+        margin-bottom: 2rem;
+    }
+    .slider-wrap{
+        .flickity-button{
+            background: $blue;
+            color: #D6E3FF;
+            &:hover{
+                background: darken($blue, 5);
+                color: darken(#D6E3FF, 5);
+            }
+            &:disabled{
+                background: $grey;
+                color: $dark-grey;
+                opacity: 1;
+            }
+        }
+    }
+    .svg-container{
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+        width: 70%;
+        height: 50vh;
+        z-index: -1;
+        svg{
+            height: 100%;
+        }
+    }
+}

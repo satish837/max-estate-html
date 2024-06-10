@@ -1,0 +1,41 @@
+.awards{
+    background: #9A4600;
+    color: #ffd6c2;
+    padding: 15vh 0;
+    margin-bottom: 25vh;
+    @include mobile{
+        margin-bottom: 10vh;
+    }
+    h3{
+        color: #ffd6c2; 
+        span{
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            &:after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                height: 2px;
+                background: $brown;
+            }
+        }
+    }
+    .awards-row-wrap{
+        border-bottom: $brown solid 2px;
+        transform: translate(0,4rem);
+        .award-row{
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+            .location{
+                color: #FFB68D;
+                font-weight: 600;
+            }
+            strong{
+                font-weight: 600;
+            }
+        }
+    }
+}

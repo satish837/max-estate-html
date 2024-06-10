@@ -1,0 +1,76 @@
+.flickity-button{
+    background: $brown;
+    color: rgba($white,  0.9);
+    &:hover{
+        background: darken($brown, 5);
+        color: rgba($white,  0.9);
+    }
+    &:disabled{
+        background: $grey;
+        color: $dark-grey;
+        opacity: 1;
+    }
+    &:focus{
+        box-shadow: none;
+    }
+    &.flickity-prev-next-button{
+        top: 50%;
+        &.previous{
+            left: 3.5%;
+        }
+        &.next{
+            right: 3.5%;
+        }
+        .flickity-button-icon{
+            left: 30%;
+            top: 30%;
+            width: 40%;
+            height: 40%;
+        }
+    }
+}
+.blue{
+    .flickity-button{
+        background: $blue;
+        color: rgba($white,  0.9);
+        &:hover{
+            background: darken($blue, 5);
+            color: rgba($white,  0.9);
+        }
+        &:disabled{
+            background: $grey;
+            color: $dark-grey;
+            opacity: 1;
+        }
+    }
+}
+.button-at-top{
+    padding-top: 0rem;
+    @include mobile{
+        padding-top: 0;
+    }
+    .flickity-button{
+        &.flickity-prev-next-button{
+            // top: 0;
+            // bottom: auto;
+            // &.previous{
+            //     left: 50%;
+            //     transform: translate(-600px,-50%);
+            // }
+            // &.next{
+            //     left: calc(50% + 60px);
+            //     transform: translate(-600px,-50%);
+            // }
+        }
+    }
+}
+.flickity-page-dots{
+    bottom: -3rem;
+    .dot{
+        background: rgba($orange, 0.6);
+        margin: 0 5px;
+        &.is-selected{
+            background: $brown;
+        }
+    }
+}

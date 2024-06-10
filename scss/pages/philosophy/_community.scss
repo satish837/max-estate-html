@@ -1,0 +1,25 @@
+.community{
+    padding: 30vh 0 50vh 0;
+    @include mobile{
+        padding: 15vh 0 50vh 0;
+    }
+    position: relative;
+    h2{
+        color: $blue;
+    }
+    .svg-container{
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+        height: 50vh;
+        z-index: -1;
+        @include mobile{
+            left: 0%;
+            width: 100%;
+            text-align: center;
+        }
+        svg{
+            height: 100%;
+        }
+    }
+}

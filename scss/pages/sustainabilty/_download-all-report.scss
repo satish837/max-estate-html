@@ -1,0 +1,21 @@
+.download-all-report{
+    padding: 20vh 0 15vh 0;
+    .container{
+        position: relative;
+        .text-block{
+            background: $white;
+        }
+        .svg-container{
+            position: absolute;
+            width: 80%;
+            left: 10%;
+            bottom: 15%;
+            z-index: -1;
+            text-align: center;
+            overflow: hidden;
+            svg{
+                width: 100%;
+            }
+        }
+    }
+}

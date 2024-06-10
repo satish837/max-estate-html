@@ -1,0 +1,6 @@
+.apply-now-wrap{
+    padding: 30vh 0;
+    @include mobile{
+        padding: 10vh 0;
+    }
+}

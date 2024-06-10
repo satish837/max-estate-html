@@ -1,0 +1,101 @@
+.downloads-block{
+    width: 100%;
+    margin: 3rem 0;
+    padding: 0px;
+    .head{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mobile{
+            flex-wrap: wrap;
+        }
+        .title{
+            width: auto;
+            margin: 0px;
+            padding: 0px;
+            color: $title-text;
+            font-size: 2.813rem;
+            font-family: $heading;
+            position: relative;
+            font-weight: 400;
+            @include mobile{
+                font-size: 2rem;
+            }
+            &::after{
+                content: "";
+                width: 100%;
+                height: 2px;
+                background: #D6E3FF;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+            }
+        }
+        .selector{
+            width: 25%;
+            @include mobile{
+                width: 80%;
+                margin: 1.5rem 0 0 0;
+            }
+            .form-select{
+                padding: 0.5rem 2.25rem 0.5rem 1rem;
+                border-radius: 15px;
+                color: $title-text;
+                border: 1px solid $title-text;
+            }
+        }
+    }
+    .grid{
+        width: 100%;
+        margin: 1rem 0 0 0;
+        padding: 0px;
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            li{
+                border-bottom: 2px solid #D6E3FF;
+                width: 100%;
+                padding: 1.2rem 0;
+                &:last-child{
+                    border-bottom: none;
+                }
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0px;
+                    padding: 0px;
+                    @include mobile{
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                    }
+                    li{
+                        width: auto;
+                        border-bottom: none;
+                        font-size: 1.125rem;
+                        color: $title-text;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        @include mobile{
+                            margin: 0.5rem 0.5rem 0 0rem;
+                            padding: 0.5rem 0;
+                            word-break: break-all;
+                        }
+                        
+                        &:first-child{
+                            width: 70%;
+                            @include mobile{
+                                width: 100%;
+                                margin:  0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

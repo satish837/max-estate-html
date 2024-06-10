@@ -1,0 +1,264 @@
+.home-philosophy-video{
+    height: 100%;
+    position: relative;
+    @include mobile{
+        height: 50%;
+    }
+    .wrap{
+        height: 100%;
+        position: relative;
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .mute-icon{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            background: url(../img/sound-mute-icon.png) left top no-repeat;
+            background-size: 30px;
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            z-index: 2;
+            &.active{
+                background-position: left -30px;
+            }
+        }
+    }
+}
+.screen-blocker{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    display: none;
+    .text-wrap{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 500;
+        flex-wrap: wrap;
+        .text{
+            width: 100%;
+            margin-bottom: 0rem;
+        }
+        .pre-loader{
+            width: 40px;
+            margin: 0 auto;
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+.home-philosophy{
+    padding: 25vh 0 15vh 0;
+    position: relative;
+    @include mobile{
+        padding-bottom: 5vh;
+    }
+    .svg-container{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        overflow: hidden;
+        svg{
+            height: 20vh;
+            display: block;
+            position: absolute;
+            left: 5%;
+            top: -1%;
+        }
+    }
+    .philosophy-content-wrap{
+        position: relative;
+        height: calc(100vh - 72px);
+        @include mobile{
+            height: auto;
+        }
+        .svg-container-2{
+            position: relative;
+            @include mobile{
+                margin-top: 5rem;
+            }
+            .svg-bg{
+                width: 100%;
+                display: block;
+                path{
+                    stroke: #FFDBC9;
+                    stroke-width: 2px;
+                    @include mobile{
+                        stroke-width: 4px;
+                    }
+                }
+            }
+            .svg-overlay{
+                position: absolute;
+                width: 100%;
+                display: block;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                path{
+                    stroke: $brown;
+                    stroke-width: 2px;
+                    @include mobile{
+                        stroke-width: 4px;
+                    }
+                }
+            }
+            .events-wrap{
+                position: absolute;
+                font-size: 0.9rem;
+                line-height: 1.2;
+                color: rgba($orange, 0.4);
+                cursor: pointer;
+                transition: $base-transition;
+                z-index: 2;
+                @include mobile{
+                    display: none;
+                }
+                &.active{
+                    color: $brown;
+                }
+                &.event-1{
+                    left: 10%;
+                    top: 10%;
+                }
+                &.event-2{
+                    left: 30%;
+                    top: -15%;
+                    width: 9%;
+                    height: 52%;
+                }
+                &.event-3{
+                    left: 50%;
+                    top: -15%;
+                    width: 9%;
+                    height: 45%;
+                }
+                &.event-4{
+                    left: 65%;
+                    top: -15%;
+                    width: 9%;
+                    height: 50%;
+                }
+                &.event-5{
+                    left: 83%;
+                    top: -15%;
+                    width: 11%;
+                    height: 50%;
+                }
+                &.event-6{
+                    left: 4%;
+                    bottom: 0%;
+                    width: 9%;
+                    height: 45%;
+                }
+                &.event-7{
+                    left: 25%;
+                    bottom: 0%;
+                    width: 8%;
+                    height: 45%;
+                }
+                &.event-8{
+                    left: 46%;
+                    bottom: 0%;
+                    width: 8%;
+                    height: 45%;
+                }
+                &.event-9{
+                    left: 66%;
+                    bottom: 0%;
+                    width: 8%;
+                    height: 45%;
+                }
+                &.event-10{
+                    left: 87%;
+                    bottom: 0%;
+                    width: 8%;
+                    height: 45%;
+                }
+            }
+        }
+        .skip-button{
+            position: absolute;
+            cursor: pointer;
+            right: 0.5rem;
+            bottom: 5rem;
+            z-index: 3; 
+            text-align: center;
+            @include hddesktop{
+                bottom: 5rem;
+            }
+            @include mobile{
+                display: none;
+            }
+            .icon{
+                width: 20px;
+                margin: 0 auto;
+                svg{
+                    width: 100%;
+                    path{
+                        fill: $brown;
+                        transition: $base-transition;
+                    }
+                }
+            }
+            .label{ 
+                width: 40px;
+                font-size: 0.65rem;
+                line-height: 1;
+                margin-top: 0.1rem;
+                color: $brown;
+                transition: $base-transition;
+            }
+        }
+    }
+    .philosophy-mobile-slider{
+        &:after{
+            content: 'flickity';
+            display: none;
+            @media screen and ( min-width: 989px ) {
+                content: '';
+            }
+        }
+        .flickity-viewport {
+            transition: height 0.2s;
+        }
+        @include mobile{
+            margin-bottom: 2rem;
+        }
+        .philosophy-content{
+            width: 100%;
+            min-height: 35vh;
+            display: none;
+            @include mobile{
+                min-height: auto;
+                display: block;
+            }
+            &:nth-child(1){
+                display: block;
+            }
+            @media only screen and (min-width: 1350px) and (max-width: 1380px) {
+                font-size: 0.85rem;
+            }
+        }
+        .flickity-page-dots{
+            bottom: -1rem;
+            pointer-events: none;
+        }
+    }
+}

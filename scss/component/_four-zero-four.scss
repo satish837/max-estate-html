@@ -1,0 +1,92 @@
+.four-zero-four-wrap{
+    position: relative;
+    .four-zero-four{
+        height: calc(100vh - 2rem);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mobile{
+            height: 70vh;
+        }
+        h1{
+            font-size: 12vw;
+            line-height: 0.7;
+            color: $blue;
+            @include mobile{
+                font-size: 20vw;
+            }
+        }
+        h3{
+            font-size: 3vw;
+            line-height: 1;
+            color: $blue;
+            margin-bottom: 2rem;
+            @include mobile{
+                font-size: 8vw;
+            }
+        }
+    }
+    .svg-container{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 5%;
+        z-index: -1;
+        svg{
+            width: 100%;
+            path{
+                stroke-width: 2.5px;
+                @include mobile{
+                    stroke-width: 4px;
+                }
+            }
+        }
+    }
+}
+.sitemap-wrap{
+    margin-top: 100px;
+    margin-bottom: 4rem;
+    @include desktop{
+        min-height: 80vh;
+    }
+    h1{
+        text-align: center;
+    }
+    .links-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 60vh;
+        margin: 2rem 0 0 0;
+        > ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            height: 100%;
+            a{
+                color: $blue;
+                text-decoration: none;
+                display: block;
+                margin-bottom: 1rem;
+                position: relative;
+                padding-left: 20px;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    background: $blue;
+                    border-radius: 50%;
+                    left: 0;
+                    top: 7px;
+                }
+            }
+            .sub-menu{
+                display: block;
+                padding-left: 40px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

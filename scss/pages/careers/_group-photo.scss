@@ -1,0 +1,15 @@
+.group-photo-wrap{
+    .group-photo{
+        position: relative;
+        img{
+            border-radius: 0.9rem;
+        }
+        .overlay-img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            display: none;
+        }
+    }
+}

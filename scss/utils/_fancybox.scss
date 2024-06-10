@@ -1,0 +1,59 @@
+.fancybox-content{
+    img{
+        border-radius: 0.9rem;
+        overflow: hidden;
+    }
+}
+.fancybox-button{
+    &.fancybox-button--close{
+        background: $brown;
+        color: $white;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        right: 1rem;
+        top: 1rem;
+        padding: 5px;
+    }
+}
+.fancybox-button[disabled], .fancybox-button[disabled]:hover{
+    opacity: 0.2;
+}
+.fancybox-navigation .fancybox-button{
+    background: transparent;
+}
+.fancybox-navigation .fancybox-button div{
+    background: $white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    color: $brown;
+    svg{
+        fill: $brown;
+    }
+}
+.fancybox-button[disabled]{
+    div{
+        opacity: 0.2;
+    }
+}
+.fancybox-caption{
+    @include mobile{
+        padding: 1rem;
+    }
+}
+.fancybox-caption__body{
+    padding: 0 10%;
+    @include mobile{
+        padding: 0;
+    }
+}
+.footer-orange{
+    .fancybox-button.fancybox-button--close{
+        background: $blue;
+    }
+    .fancybox-navigation .fancybox-button div{
+        color: $blue;
+    }
+}

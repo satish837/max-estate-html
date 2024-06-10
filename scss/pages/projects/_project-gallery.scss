@@ -1,0 +1,61 @@
+.project-gallery {
+    padding: 10vh 0;
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    .slider-wrap {
+        .slides {
+            .wrap {
+                height: 100%;
+
+                .image {
+                    height: 100%;
+                    @include mobile{
+                        width: 100%;
+                        height: auto;
+                    }
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                        @include mobile{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+
+                .label {
+                    font-weight: 600;
+                    color: $brown;
+                }
+
+                p {
+                    margin-top: 1rem;
+                    font-size: 0.9rem;
+                    opacity: 0;
+                    transition: $base-transition;
+                    text-align: center;
+                    @include mobile{
+                        opacity: 1;
+                    }
+                }
+
+                &:hover,
+                &.is-selected {
+                    p {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &.amenities-slider{
+            .flickity-button{
+                &.flickity-prev-next-button{
+                    top: 200px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.other-projects{
+    position: relative;
+    margin-bottom: 15vh;
+    .svg-container{
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        left: 50%;
+        top: 15%;
+        padding-left: 2%;
+        z-index: -1;
+        transform: translate(-660px, 0);
+        @include mobile{
+            display: none;
+        }
+        svg{
+            height: 100%;
+        }
+    }
+    h3{
+        margin-bottom: 15vh;
+        @include mobile{
+            margin-bottom: 1rem;
+        }
+    }
+    .other-project-thumb{
+        .wrap{
+            position: relative;
+            height: 100%;
+            @include mobile{
+                height: auto;
+            }
+            .image{
+                img{
+                    border-radius: 0.9rem;
+                    width: 100%;
+                    transition: $base-transition;
+                }
+            }
+            .label{
+                text-align: center;
+                margin: 1rem 0;
+                transition: $base-transition;
+            }
+            &:hover{
+                .image{
+                    img{
+                        transform: scale(1.1);
+                        @include mobile{
+                            transform: scale(1);
+                        }
+                    }
+                }
+                .label{
+                    margin-top: 2rem;
+                }
+            }
+            .more-copy{
+                position: absolute;
+                width: 100px;
+                left: 0;
+                top: 50%;
+                transform: translate(0,-70%);
+                font-size: 1.3rem;
+                @include mobile{
+                    width: 50%;
+                    padding: 2rem 0;
+                    transform: none;
+                    position: relative;
+                }
+            }
+            .svg-arrow{
+                position: absolute;
+                width: 100px;
+                left: 120px;
+                top: 50%;
+                transform: translate(0,-100%);
+                @include mobile{
+                    left: auto;
+                    right: 0;
+                    transform: translate(0,-50%);
+                }
+                svg{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

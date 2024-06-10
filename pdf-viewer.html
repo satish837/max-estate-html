@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title>Max Estates</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/pdfviewer.jquery.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .pdf-toolbar{
+      display: none !important;
+    }
+  </style>
+  <meta name="theme-color" content="#fafafa">
+</head>
+<script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.7.0.min.js"><\/script>')</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
+  <script src="js/pdfviewer.jquery.js"></script>
+
+<script>
+  $(window).on('load', function(){
+    $('iframe').css('height', $(window).innerHeight());
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('pdf_url');
+    // $.get(myParam, function(data, status){
+    //   $('iframe').attr('src', 'https://docs.google.com/gview?embedded=true&url='+myParam);
+    // });
+    const options = {
+        width: $(window).width(),
+        height: $(window).height()
+    };
+    $('#pdfviewer').pdfViewer(myParam, options);
+  });
+</script>
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <div id="pdfviewer"></div>
+  <!-- <div class="loader-pdf">Loading, please wait... <img src="img/loader.png" alt=""></div>
+  <iframe class="pdf-loader-iframe" sandbox="allow-scripts allow-same-origin" width="100%"></iframe> -->
+
+</body>
+
+</html>

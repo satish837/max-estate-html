@@ -1,0 +1,346 @@
+.art-at-max-estate{
+    padding: 15vh 0;
+    @include mobile{
+        padding: 10vh 0 0 0;
+    }
+    h1{
+        text-align: center;
+        font-size: 4rem;
+        color: $blue;
+        @include mobile{
+            font-size: 2rem;
+        }
+    }
+    .para{
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        @include mobile{
+            width: 100%;
+        }
+    }
+    .svg-wrap{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        max-width: 80%;
+        margin: 0 auto;
+        padding-top: 61%;
+        @include mobile{
+            max-width: 95%;
+        }
+        .art-gallery{
+            position: absolute;
+            z-index: 2;
+            overflow: hidden;
+            border-radius: 0.8rem;
+            cursor: pointer;
+            @include mobile{
+                border-radius: 0.3rem;
+            }
+            .title{
+                position: absolute;
+                width: 100%;
+                padding: 0.5rem 0;
+                text-align: center;
+                color: $white;
+                background: rgba(#001B3E, 0.7);
+                font-size: 0.8rem;
+                left: 0;
+                bottom: 0%;
+                transform: translate(0, 100%);
+                font-weight: 500;
+                transition: all 0.6s ease;
+                @include mobile{
+                    padding: 0.3rem 0;
+                    font-size: 0.6rem;
+                    display: none;
+                }
+            }
+            img{
+                width: 100%;
+                display: block;
+                transition: all 0.6s ease;
+            }
+            &:hover{
+                img{
+                    transform: scale(1.05);
+                }
+                .title{
+                    transform: translate(0, 0%);
+                }
+            }
+            &.art1{
+                left: 0;
+                top: 0;
+                width: 15%;
+            }
+            &.art2{
+                left: 7%;
+                top: 15.5%;
+                width: 8.5%;
+                @include mobile{
+                    top: 18%;
+                }
+            }
+            &.art3{
+                left: 10%;
+                top: 32.5%;
+                width: 12%;
+                @include mobile{
+                    top: 38%;
+                }
+            }
+            &.art4{
+                left: 17%;
+                top: 0%;
+                width: 33%;
+            }
+            &.art5{
+                left: 23%;
+                top: 31.5%;
+                width: 10%;
+                @include mobile{
+                    top: 37%;
+                }
+            }
+            &.art6{
+                left: 0%;
+                top: 0%;
+                width: 16%;
+                // @include mobile{
+                //     top: 63%;
+                // }
+            }
+            &.art7{
+                left: 34.5%;
+                top: 31%;
+                width: 16.2%;
+                @include mobile{
+                    top: 37%;
+                }
+            }
+            &.art8{
+                left: 34.5%;
+                top: 47%;
+                width: 10%;
+                @include mobile{
+                    top: 56%;
+                }
+            }
+            &.art9{
+                left: 51.8%;
+                top: 0%;
+                width: 16%;
+            }
+            &.art10{
+                left: 51.8%;
+                top: 30.8%;
+                width: 16%;
+                @include mobile{
+                    top: 37%;
+                }
+            }
+            &.art11{
+                left: 46%;
+                top: 47%;
+                width: 10.5%;
+                @include mobile{
+                    top: 56%;
+                }
+            }
+            &.art12{
+                left: 46%;
+                top: 64%;
+                width: 10.5%;
+                @include mobile{
+                    top: 76%;
+                }
+            }
+            &.art13{
+                left: 57.5%;
+                top: 42.2%;
+                width: 10%;
+                @include mobile{
+                    top: 51%;
+                }
+            }
+            &.art14{
+                left: 57.5%;
+                top: 54.5%;
+                width: 10%;
+                @include mobile{
+                    top: 65%;
+                }
+            }
+            &.art15{
+                left: 69%;
+                top: 0;
+                width: 31.3%;
+            }
+            &.art16{
+                left: 69%;
+                top: 19.5%;
+                width: 16%;
+                @include mobile{
+                    top: 24%;
+                }
+            }
+            &.art17{
+                left: 86.5%;
+                top: 19.5%;
+                width: 8.5%;
+                @include mobile{
+                    top: 24%;
+                }
+            }
+        }
+        .svg-container{
+            position: absolute;
+            width: 100%;
+            height: 80px;
+            bottom: 50px;
+            z-index: -1;
+            text-align: center;
+            @include mobile{
+                bottom: -90px;
+            }
+            svg{
+                height: 100%;
+                path{
+                    stroke-width: 2.5px;
+                    @include mobile{
+                        stroke-width: 2.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+.art-popup{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    height: 100%;
+    background: #F9F9FF;
+    display: none;
+    .close{
+        width: 30px;
+        height: 30px;
+        color: $white;
+        background: $blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        line-height: 1;
+        font-weight: 500;
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        z-index: 2;
+        border-radius: 50%;
+        svg{
+            width: 13px;
+        }
+    }
+    .wrap{
+        padding: 4rem;
+        display: flex;
+        height: 100%;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        @include mobile{
+            padding: 1rem;
+            overflow: auto;
+        }
+        .left-items{
+            width: 20%;
+            margin-right: 5%;
+            height: 100%;
+            @include mobile{
+                width: 100%;
+                height: auto;
+                margin: 1rem 0 0 0;
+            }
+            .grid-item { 
+                width: calc(33% - 8px); 
+                cursor: pointer;
+                @include mobile{
+                    width: calc(25% - 8px); 
+                }
+                img{
+                    width: 100%;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+        .right-item{
+            width: 75%;
+            height: 100%;
+            @include mobile{
+                width: 100%;
+                height: auto;
+            }
+            .content-wrap{
+                display: none;
+                height: 100%;
+                .image{
+                    height: 65%;
+                    width: auto;
+                    position: relative;
+                    @include mobile{
+                        height: auto;
+                    }
+                    &.expand{
+                        height: 100%;
+                    }
+                    img{
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: cover;
+                        border-radius: 0.8rem;
+                    }
+                    .expand-image{
+                        background: $blue;
+                        position: absolute;
+                        left: 0.5rem;
+                        bottom: 0.5rem;
+                        border-radius: 30rem;
+                        color: #D6E3FF;
+                        padding: 0.5rem 1.5rem;
+                        z-index: 1;
+                        cursor: pointer;
+                        @include mobile{
+                            display: none;
+                        }
+                    }
+                }
+                .description{
+                    margin-top: 1.5rem;
+                    .title{
+                        font-size: 1.8rem;
+                        margin-bottom: 0.5rem;
+                        font-family: $heading;
+                        color: $blue;
+                    }
+                    .artist-name{
+                        font-size: 1rem;
+                        margin-bottom: 0.5rem;
+                    }
+                    .sub-title{
+                        font-size: 1.1rem;
+                        margin-bottom: 0.5rem;
+                    }
+                    p{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}

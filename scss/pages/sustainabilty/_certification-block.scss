@@ -1,0 +1,41 @@
+.certification-block{
+    width: 100%;
+    margin: 5rem 0;
+    padding: 2rem 0;
+    background: $light;
+    .heading{
+        width: 100%;
+        margin: 0px 0 1rem 0;
+        padding: 0px;
+        font-size: 2.813rem;
+        color: $title-text;
+        font-family: $heading;
+    }
+    ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        li{
+            width: 100%;
+            margin: 0px;
+            padding: 2rem 0;
+            border-bottom: 2px solid $blue-btn-text;
+            &:last-child{
+                border-bottom: none;
+            }
+            p{
+                font-size: 1rem;
+                margin: 0px;
+                padding: 0px;
+                color: $title-text;
+                font-weight: 600;
+                text-transform: uppercase;
+                span{
+                    display: block;
+                    color: $blue-600;
+                    padding: 0.5rem 0;
+                }
+            }
+        }
+    }
+}

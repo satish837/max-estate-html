@@ -1,0 +1,117 @@
+.board-member-and-committee-composition{
+    width: 100%;
+    margin: 5rem 0 8rem 0;
+    padding: 0px;
+    .container{
+        position: relative;
+        &::after{
+            width: 85%;
+            height: 80%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -50px;
+            content: "";
+            border: 2px solid $orange;
+            border-radius: 50px;
+            z-index: -1;
+        }
+    }
+    
+    .heading{
+        width: 100%;
+        color: $title-text;
+        font-family: $heading;
+        font-size: 3.563rem;
+        text-align: center;
+        @include mobile{
+            font-size: 2rem;
+        }
+    }
+    .top{
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .cards{
+            background: $blue;
+            .desc{
+                .name{
+                    color: $white;
+                }
+                .designation{
+                    color: $white;
+                }
+            }
+        }
+    }
+    .btm{
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .cards{
+        width: 40%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 1rem 0;
+        padding: 1rem 0;
+        padding-left: 3rem;
+        background: $light;
+        border-radius: 15px;
+        
+        @include mobile{
+            flex-direction: column;
+            padding: 1rem;
+            width: 100%;
+            border: rgba($blue, 0.1) solid 1px;
+            flex-wrap: wrap;
+        }
+        .thumb{
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            margin: 0px 2rem 0 0;
+            padding: 0px;
+            overflow: hidden;
+            @include mobile{
+                width: 80px;
+                height: 80px;
+                margin: 0 0 1rem 0;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .desc{
+            margin: 0px;
+            padding: 0px;
+            @include mobile{
+                text-align: center;
+            }
+            .name{
+                width: 100%;
+                font-size: 1.188rem;
+                color: $orange;
+                font-weight: 600;
+                @include mobile{
+                    font-size: 1rem;
+                }
+            }
+            .designation{
+                width: 100%;
+                font-size: 1.063rem;
+                color: $blue-600;
+                font-style: italic;
+                @include mobile{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

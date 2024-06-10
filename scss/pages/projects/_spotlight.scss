@@ -1,0 +1,36 @@
+.project-spotlight {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    .flickity-viewport {
+        min-height: 800px;
+    }
+
+    .spotlight-slider-wrap {
+        height: 100%;
+
+        .slides {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .flickity-page-dots {
+        bottom: 2rem;
+
+        .dot {
+            background: rgba($white, 0.5);
+            filter: drop-shadow(0 0 0.75rem black);
+            border: #fff solid 1px;
+            &.is-selected {
+                background: rgba($white, 1);
+            }
+        }
+    }
+}

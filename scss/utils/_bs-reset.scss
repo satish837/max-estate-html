@@ -1,0 +1,145 @@
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+    padding-right: var(--bs-gutter-x,1rem);
+    padding-left: var(--bs-gutter-x,1rem);
+}
+.btn{
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    font-size: 14px;
+    &-primary{
+        background: $brown;
+        border-color: $brown;
+        &:hover, &:active, &:focus{
+            background: darken($brown, 8);
+            border-color: darken($brown, 8);
+        }
+        &.blue{
+            background: $title-text;
+            border-color: $title-text;
+            color: $blue-btn-text;
+            &:hover, &:active, &:focus{
+                background: darken($title-text, 5);
+                border-color: darken($title-text, 5);
+                color: $blue-btn-text;
+            }
+        }
+    }
+    &-outline{
+        &-primary{
+            border-color: $btn-grey;
+            color: $brown;
+            &:hover, &:focus{
+                background: $brown;
+                color: $brown-btn-text;
+                border-color: $brown;
+            }
+            &:active{
+                background: #421A00;
+                color: $brown-btn-text;
+                border-color: #421A00;
+            }
+            &.blue{
+                border-color: $btn-grey;
+                color: $title-text;
+                &:hover, &:focus{
+                    background: $title-text;
+                    color: $blue-btn-text;
+                    border-color: $title-text;
+                }
+                &:active{
+                    background: $black;
+                    color: $blue-btn-text;
+                    border-color: $black;
+                }
+            }
+        }
+    }
+}
+@include desktop{
+.modal-dialog {
+    &.medium{
+        max-width: 700px;
+    }
+}
+}
+.modal-content{
+    border-radius: 1rem;
+    background: #F9F9FF;
+    @include mobile{
+        border-radius: 0.5rem;
+    }
+    .close{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: $brown;
+        right: 0;
+        top: 0;
+        transform: translate(0,-120%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        svg{
+            width: 12px;
+            path{
+                fill: $brown-btn-text;
+            }
+        }
+    }
+}
+.footer-orange, .blue-theme{
+    .modal-content{
+        .close{
+            background: $title-text;
+            svg{
+                path{
+                    fill: $blue-btn-text;
+                }
+            }
+        }   
+    }
+}
+.modal-body{
+    padding: 3rem 4rem;
+    @include mobile{
+        padding: 1rem;
+    }
+    .h1{
+        font-size: 2.5rem;
+    }
+}
+.form-control, .form-select{
+    border-radius: 0.7rem;
+    border-color: $blue;
+    padding: 0.5rem 1rem;
+    color: $title-text;
+    @include placeholder{
+        color: #D6E3FF;
+    }
+    &.orange{
+        border-color: $brown;
+        color: $brown;
+        @include placeholder{
+            color: #FFDBC9;
+        }
+    }
+}
+input[type="file"]::file-selector-button {
+    display: none;
+}
+.orange{
+    .form-control, .form-select{
+        border-color: $brown;
+    }
+}
+.modal-backdrop{
+    &.show{
+        opacity: 1;
+    }
+    background:rgba(#00102A,0.7)
+}
+.btn.btn-size-big{
+    padding: 0.8rem 2rem;
+}

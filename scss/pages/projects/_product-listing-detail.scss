@@ -1,0 +1,72 @@
+.product-listing-detail-wrap {
+    padding: 3rem 0;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    .svg-wave {
+        position: absolute;
+        width: 150px;
+        right: 100%;
+        top: 0;
+
+        svg {
+            width: 100%;
+        }
+
+        &.blue {
+            path {
+                stroke: $blue;
+            }
+        }
+
+        &.orange {
+            path {
+                stroke: $orange;
+            }
+        }
+    }
+
+    .project-list-thumb {
+        .image {
+            width: 100%;
+            img {
+                border-radius: 0.8rem;
+                transition: $base-transition;
+                transform-origin: center top;
+                width: 100%;
+            }
+
+        }
+
+        .title {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: $base-transition;
+        }
+
+        >div {
+            position: relative;
+
+            &:hover {
+                img {
+                    transform: scale(1.05);
+
+                    @include mobile {
+                        transform: scale(1);
+                    }
+                }
+
+                .title {
+                    margin-top: 2rem;
+
+                    @include mobile {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

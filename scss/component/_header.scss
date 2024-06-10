@@ -1,0 +1,314 @@
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    padding: 0.5rem 0;
+    transition: $base-transition;
+    z-index: 10;
+    @include mobile{
+        height: 60px;
+    }
+    .wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            width: 120px;
+            @include mobile{
+                width: 80px;
+            }
+            svg{
+                width: 100%;
+                display: block;
+                path{
+                    transition: $base-transition;
+                }
+                .orange-svg-fill{
+                    fill: $white;
+                }
+                .blue-svg-fill{
+                    fill: $white;
+                }
+            }
+        }
+        .nav-wrap{
+            display: flex;
+            align-items: center;
+            .search-icon{
+                width: 25px;
+                margin-right: 0.5rem;
+                cursor: pointer;
+                position: relative;
+                @include mobile{
+                    margin-right: 0;
+                    display: none;
+                }
+                button{
+                    width: 25px;
+                    height: 25px;
+                    border: none;
+                    background: transparent;
+                    svg{
+                        width: 100%;
+                        fill: $white;
+                        position: relative;
+                        z-index: 2;
+                        transition: $base-transition;
+                        right: 0;
+                    }
+                }
+                .search-input{
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    background: transparent;
+                    border: $brown solid 1px;
+                    border-radius: 11px;
+                    padding: 0.5rem 3rem 0.5rem 1rem;
+                    font-size: 0.9rem;
+                    transform: translate(0,-50%);
+                    z-index: 1;
+                    width: 300px;
+                    display: none;
+                    outline: 0;
+                }
+                &.active{
+                    svg{
+                        right: 0.5rem;
+                    }
+                    .search-input{
+                        display: block;
+                    }
+                }
+            }
+            nav{
+                margin: 0 0.5rem;
+                @include mobile{
+                    margin: 0 0.5rem 0 0s;
+                }
+                ul{
+                    display: flex;
+                    li{
+                        font-weight: 500;
+                        font-size: 1.1rem;
+                        margin-left: 1rem;
+                        @include mobile{
+                            font-size: 0.9rem;
+                            margin-left: 0.5rem;
+                        }
+                        a{
+                            color: $white;
+                            text-decoration: none;
+                            transition: $base-transition;
+                            &:hover{
+                                color: $orange;
+                            }
+                        }
+                    }
+                }
+            }
+            .hamburger{
+                width: 20px;
+                margin-left: 1rem;
+                cursor: pointer;
+                @include mobile{
+                    margin-left: 0.5rem;
+                }
+                ul{
+                    li{
+                        width: 100%;
+                        height: 2px;
+                        background: $white;
+                        margin-bottom: 4px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.up{
+        transform: translate(0,-110%);
+    }
+    &.solid-default{
+        background: $white;
+        .wrap{
+            .logo{
+                svg{
+                    .orange-svg-fill{
+                        fill: $orange;
+                    }
+                    .blue-svg-fill{
+                        fill: $blue;
+                    }
+                }
+            }
+            .nav-wrap{
+                .search-icon{
+                    svg{
+                        fill: $brown;
+                    }
+                }
+                nav{
+                    ul{
+                        li{
+                            a{
+                                color: $brown;
+                                &:hover{
+                                    color: $orange;
+                                }
+                            }
+                        }
+                    }
+                }
+                .hamburger{
+                    ul{
+                        li{
+                            background: $brown;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.solid{
+        background: $white;
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+        &.no-shadow{
+            box-shadow: none;
+            background: transparent;
+        }
+        .wrap{
+            .logo{
+                svg{
+                    .orange-svg-fill{
+                        fill: $orange;
+                    }
+                    .blue-svg-fill{
+                        fill: $blue;
+                    }
+                }
+            }
+            .nav-wrap{
+                .search-icon{
+                    svg{
+                        fill: $brown;
+                    }
+                }
+                nav{
+                    ul{
+                        li{
+                            a{
+                                color: $brown;
+                                &:hover{
+                                    color: $orange;
+                                }
+                            }
+                        }
+                    }
+                }
+                .hamburger{
+                    ul{
+                        li{
+                            background: $brown;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.hamburger-open-menu{
+    background: $white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    padding: 100px 5rem 1rem 5rem;
+    opacity: 0;
+    transform: translate(0,-100%);
+    overflow: hidden;
+    @include mobile{
+        padding: 75px 1.5rem 1rem 1.5rem;
+    }
+    nav{
+        min-height: calc(100% - 30px);
+        position: relative;
+        ul{
+            li{
+                font-family: $heading;
+                font-size: 2rem;
+                text-align: right;
+                line-height: 1.4;
+                margin-bottom: 0rem;
+                @include mobile{
+                    font-size: 1.5rem;
+                }
+                a{  
+                    color: $blue;
+                    text-decoration: none;
+                    position: relative;
+                    background: $white;
+                    display: inline-block;
+                    padding-left: 2rem;
+                    @include mobile{
+                        padding-left: 1rem;
+                    }
+                }
+                ul{
+                    display: none;
+                    li{
+                        font-size: 1.5rem;
+                        margin-bottom: 0;
+                        padding-bottom: 0.3rem;
+                        @include mobile{
+                            font-size: 1.2rem;
+                        }
+                        a{
+                            color: #6291DE;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .selector-line{
+        position: absolute;
+        width: 100%;
+        height: 115px;
+        right: 0;
+        top: 40px;
+        z-index: -1;
+        transform: translate(0, -55%);
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        @include mobile{
+            visibility: hidden;
+        }
+        svg{
+            height: 100%;
+            display: block;
+            path{
+                visibility: hidden;
+                @include desktop{
+                    stroke-width: 3.5px;
+                }
+                @include mobile{
+                    stroke-width: 5px;
+                }
+            }
+        }
+    }
+    .bottom-bar{
+        color: $blue;
+        @include mobile{
+            font-size: 0.9rem;
+        }
+    }
+}

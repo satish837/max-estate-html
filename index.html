@@ -1,0 +1,744 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Max Estate</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" integrity="sha512-UiVP2uTd2EwFRqPM4IzVXuSFAzw+Vo84jxICHVbOA1VZFUyr4a6giD9O3uvGPFIuB2p3iTnfDVLnkdY7D/SJJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <header>
+    <div class="container-fluid">
+      <div class="wrap">
+        <div class="logo">
+          <a href="javascript:;">
+            <svg viewBox="0 0 119 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.601 0.157425L20.9609 5.74598C23.2878 7.79249 23.9858 10.7048 23.9858 13.4597C23.9858 20.3077 17.0829 23.5349 14.7561 29.1234C14.058 30.619 13.5927 32.508 13.7478 34.2397C13.7478 34.9481 14.2131 37.6243 15.0663 37.7817C21.1161 39.1199 26.0024 34.8694 23.9858 28.1002C23.5204 26.2111 23.1326 25.5027 22.2795 24.322H22.5897L28.9497 29.9893C30.2682 31.3274 30.9663 32.5868 30.9663 34.3971C31.4316 39.907 27.0107 44 22.1243 44C19.9526 44 18.2463 43.2916 16.9278 42.1109L9.71463 35.6565C7.54293 33.7674 7 31.5635 7 28.6512C7 22.1968 12.1966 18.576 14.3683 12.9875C15.3766 10.7835 15.6868 8.57961 15.6868 6.13954C15.6868 4.25045 15.6868 1.73166 14.3683 0L14.601 0.157425Z" class="orange-svg-fill" />
+              <path d="M30.3058 49.0763C30.3058 49.0763 37.4504 55.1797 38 55.7274L37.686 55.8839C35.6446 54.1625 33.0537 53.3017 30.2273 53.1452C27.4793 52.9887 24.9669 53.8495 22.376 54.7102C21.1983 55.0232 20.1777 55.5709 19 56.0404C17.2727 56.7447 15.4669 57.2142 13.7397 56.9012C10.9917 56.5882 8.47934 54.5537 6.28099 52.6757L0 47.2765L0.314049 47.12C4.08264 49.1545 7.45868 50.1718 11.8554 49.4675C13.5826 49.311 20.0207 46.2593 21.905 46.1028C23.2397 45.9463 24.2603 45.9463 25.5165 46.2593C27.7149 46.8853 28.7355 47.746 30.3058 49.0763Z" class="blue-svg-fill" />
+              <path d="M117.281 32.9231C116.101 32.7692 115.551 32.0769 114.056 30.0769L107.056 20.2308L112.483 12.9231C112.955 12.0769 114.371 11.7692 115.393 11.6154C116.101 11.4615 116.258 10.7692 116.258 10.4615H108.551C108.551 10.6154 108.551 11.3077 109.416 11.6154C110.281 11.9231 110.753 12.6154 109.966 13.7692L105.876 19.0769L102.494 13.9231C101.315 12.2308 101.944 11.7692 103.045 11.6154C103.753 11.4615 103.91 10.7692 103.91 10.4615H93.6854C93.6854 10.6154 93.6854 11.3077 94.5506 11.6154C95.5731 11.7692 96.4382 12.4615 97.3034 13.6154L103.124 22.1538L97.4607 29.6154C96.4382 31.1538 95.9663 31.7692 95.2585 32.3077C94.5506 32.8462 93.9214 32.4615 93.5281 32.3077C92.8203 31.8462 92.3483 31 91.9551 30C90.618 26.8462 86.1349 15.6923 83.9326 10H81.5731C78.5056 17.5385 73.8652 28.4615 72.6854 31C71.9776 32.3077 70.7978 33 69.7753 33C69.7753 33 67.0225 33.4615 66.7079 31.4615C66.7079 31.1538 66.7079 30.6154 66.7079 29.9231V14.7692C66.7079 12.7692 67.4157 11.7692 69.3034 11.4615C70.1686 11.3077 70.1686 10.3077 70.1686 10.3077H63.5618L54.045 27.7692L45.1573 10.2308H38C38 10.2308 38 11.2308 38.7079 11.2308C40.0449 11.3846 41.3034 11.9231 41.4607 14.2308V28.9231C41.4607 29.7692 41.3034 30.6154 41.3034 31.0769C41.1461 31.9231 40.5955 32.3846 39.4157 32.5385C38.3933 32.6923 38.3933 33.5385 38.3933 33.6923H46.2584V33.5385C46.2584 33.2308 46.1011 32.6923 45.236 32.5385C44.0562 32.3846 43.5056 31.8462 43.3483 31.0769C43.191 30.3846 43.191 29.7692 43.191 28.9231V16.3846L51.8427 33.9231H52.7079L61.5955 17.0769H61.7528V29.9231C61.7528 30.7692 61.7528 31.3846 61.5955 31.9231C61.4382 32.4615 60.7303 32.6154 59.8652 32.7692C59 33.0769 59 33.7692 59 33.9231H66.3146H67.1798H69.5393H69.854H76.6967C76.6967 33.9231 76.6967 33.0769 75.6742 32.7692C74.809 32.4615 74.4944 31.6154 74.9663 30.4615L76.5394 26.4615H85.5843L87.1573 30.4615C87.6292 31.6154 87.4719 32.4615 86.6068 32.7692C85.5843 33.0769 85.5843 33.7692 85.5843 33.9231H93.0562H93.2135H93.5281H94.8652H95.0225H95.3371H99.7416C99.7416 33.9231 99.8989 33.0769 98.7191 32.6154C98.0113 32.4615 98.0113 31.4615 99.1911 29.9231L103.989 23.4615L108.944 30.3077C110.124 32.1538 109.652 32.6154 108.787 32.8462C107.921 33.1538 107.921 33.8462 107.921 34H117.989C117.989 33.9231 118.146 33.2308 117.281 32.9231ZM77.0899 24.9231L81.0225 15.0769L84.5618 24.9231H77.0899Z" class="blue-svg-fill" />
+              <path d="M39 42H44V43.5929H40.5942V45.823H43.3478V47.3363H40.5942V49.2478H44V51H39V42Z" class="blue-svg-fill" />
+              <path d="M56.8378 43.8305C56.8378 43.8305 54.8919 43.678 54.1622 43.678C53.2703 43.678 52.7838 43.9831 52.7838 44.517C52.7838 45.0508 53.1081 45.3559 54.5676 45.8136C56.5135 46.5 57 46.8051 57 48.3305C57 50.161 56.1081 51 53.8378 51C52.6216 51 51 50.6949 51 50.6949L51.1622 49.1695C51.1622 49.1695 52.9459 49.322 53.8378 49.322C54.7297 49.322 55.4595 49.1695 55.4595 48.3305C55.4595 47.8729 54.8919 47.6441 53.6757 47.1864C51.7297 46.5 51 45.8898 51 44.517C51 42.839 52.0541 42 54.1622 42C55.3784 42 57 42.3051 57 42.3051L56.8378 43.8305Z" class="blue-svg-fill" />
+              <path d="M63 42H69V43.7522H66.9474V51H65.2895V43.7522H63V42Z" class="blue-svg-fill" />
+              <path d="M76.8876 42H80.1124L82 51H80.2697L79.9551 49.4867H77.0449L76.7303 51H75L76.8876 42ZM77.4382 47.7345H79.6405L78.7753 43.5929H78.2247L77.4382 47.7345Z" class="blue-svg-fill" />
+              <path d="M88 42H94V43.7522H91.7895V51H90.0526V43.7522H88V42Z" class="blue-svg-fill" />
+              <path d="M101 42H106V43.5929H102.522V45.823H105.348V47.3363H102.522V49.2478H106V51H101V42Z" class="blue-svg-fill" />
+              <path d="M118.838 43.8305C118.838 43.8305 116.892 43.678 116.162 43.678C115.27 43.678 114.784 43.9831 114.784 44.517C114.784 45.0508 115.108 45.3559 116.568 45.8136C118.514 46.5 119 46.8051 119 48.3305C119 50.161 118.108 51 115.838 51C114.622 51 113 50.6949 113 50.6949L113.162 49.1695C113.162 49.1695 114.946 49.322 115.838 49.322C116.73 49.322 117.459 49.1695 117.459 48.3305C117.459 47.8729 116.892 47.6441 115.676 47.1864C113.73 46.5 113 45.8898 113 44.517C113 42.839 114.054 42 116.162 42C117.378 42 119 42.3051 119 42.3051L118.838 43.8305Z" class="blue-svg-fill" />
+            </svg>
+          </a>
+        </div>
+        <div class="nav-wrap">
+          <div class="search-icon">
+            <button>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.755 14.255H14.965L14.685 13.985C15.665 12.845 16.255 11.365 16.255 9.755C16.255 6.165 13.345 3.255 9.755 3.255C6.165 3.255 3.255 6.165 3.255 9.755C3.255 13.345 6.165 16.255 9.755 16.255C11.365 16.255 12.845 15.665 13.985 14.685L14.255 14.965V15.755L19.255 20.745L20.745 19.255L15.755 14.255ZM9.755 14.255C7.26501 14.255 5.255 12.245 5.255 9.755C5.255 7.26501 7.26501 5.255 9.755 5.255C12.245 5.255 14.255 7.26501 14.255 9.755C14.255 12.245 12.245 14.255 9.755 14.255Z" />
+              </svg>
+            </button>
+            <input type="text" class="search-input">
+          </div>
+          <nav>
+            <ul>
+              <li><a href="javascript:;">Residential</a></li>
+              <li><a href="javascript:;">Commercial</a></li>
+            </ul>
+          </nav>
+          <div class="hamburger">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="hamburger-open-menu">
+    <nav>
+      <ul>
+        <li><a href="javascript:;">About Us</a></li>
+        <li><a href="javascript:;">Our Philosophy</a></li>
+        <li><a href="javascript:;">Projects</a>
+          <ul>
+            <li><a href="javascript:;" class="sub-link">Commercial Projects</a></li>
+            <li><a href="javascript:;" class="sub-link">Residential Projects</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:;">Leadership Team</a></li>
+        <li><a href="javascript:;">News and Media</a></li>
+        <li><a href="javascript:;">Sustainability</a></li>
+        <li><a href="javascript:;">Investors</a></li>
+        <li><a href="javascript:;">Resources</a>
+          <ul>
+            <li><a href="javascript:;" class="sub-link">Blogs</a></li>
+            <li><a href="javascript:;" class="sub-link">Downloads</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:;">Careers</a></li>
+        <li><a href="javascript:;">Connect With Us</a></li>
+      </ul>
+    </nav>
+    <div class="selector-line">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2454.07 119.1"><path d="m1.5,86.47c140.56,41.79,401.12,53.83,577.31-43.18s593.3,19.45,593.3,19.45c154.24,40.85,248.32,3.3,248.32,3.3,29.96-7.39,48.44-31.3,103.63-31.3,61.26,0,74.14,81.75,216.81,81.75,55.4,0,168.39-45.32,137.97-102.63-6.46-12.16-23.71-15.91-35.85-8.76-11.2,6.59-4.55,21.85,1.44,29.64,26.32,34.26,65.31,59.29,139.35,33.09,74.05-26.2,128.38,22.47,226.93,22.47,79.91,0,103.43-45.03,166.2-8.03,30.9,18.21,36.76-30.6,75.65,0" fill="none" stroke="#f47920" stroke-linecap="round" stroke-width="2.5"/></svg>
+    </div>
+    <div class="bottom-bar">&copy;Copyright Max Estates Limited
+      <script>document.write(new Date().getFullYear())</script>
+    </div>
+  </div>
+  <section class="spotlight">
+    <div class="wrap">
+      <video loop muted autoplay poster="img/spotlight-poster.jpg">
+        <source src="img/spotlight.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="go-down">
+        <svg viewBox="0 0 34 33" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.34083 8.40813L2.83333 10.8419L17 24.5919L31.1667 10.8419L28.6592 8.40813L17 19.7244L5.34083 8.40813Z" fill="#FFFBFF" />
+        </svg>
+      </div>
+    </div>
+  </section>
+  <section class="home-about">
+    <div class="svg-container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 691.11 787.41">
+        <path d="m368.18,786.02C785.32,622.81,853.59,72.63,228.26,72.63,125.69,72.63,50.72,44.33.98,1.13" fill="none" stroke="#f47920" stroke-width="3" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-center text-lg-end pe-lg-4 mb-4 mb-lg-0">
+          <h1>Max Estates Limited</h1>
+          <a href="javascript:;" class="btn btn-outline-primary rounded-pill shadow-none">More About Us</a>
+        </div>
+        <div class="col-lg-5 ps-lg-4 pe-lg-5">
+          <p>Max Estates Limited, real estate development arm of the Max Group, is a leading real estate developer in India, with a focus on creating sustainable and world-class developments. With over four decades of expertise in handling some of India's largest businesses across multiple verticals, we are committed to creating developments that are not just functional and aesthetically pleasing, but environmentally sustainable too.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="home-philosophy-video">
+    <div class="wrap muted-video-wrapper">
+      <div class="mute-icon"></div>
+      <video loop muted autoplay poster="img/philosophy-poster.jpg">
+        <source src="img/philosophy.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+  <div class="screen-blocker">
+    <div class="text-wrap">
+      <div>
+        <div class="text">Skipping Ahead</div>
+        <div class="pre-loader"><img src="img/skip-loader.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+  <section class="home-philosophy">
+    <div class="svg-container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.53 172.16">
+        <path d="m47.17,171.52c-13.16-27.85-23.58-56.62-31.25-85.93C8.58,57.49,3.76,28.89,1.5.12" fill="none" stroke="#f47920" stroke-width="3" />
+      </svg>
+    </div>
+    <div class="philosophy-content-wrap">
+      <div class="container">
+        <div class="philosophy-mobile-slider">
+          <div class="philosophy-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <h2>Philosophy</h2>
+              </div>
+              <div class="col-lg-8">
+                <p>MEL's philosophy is rooted in the belief that the spaces we inhabit have a profound impact on our well-being. We recognise that wellness is about more than just physical health, and that our environment plays a crucial role in our overall sense of well-being.</p>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <h2>Empathetic Hospitality</h2>
+              </div>
+              <div class="col-lg-8">
+                <p>An intelligent approach to hospitality and service is by creating one that values empathy. We aim at doing our best by understanding the emotional and social needs of our customers, and creating spaces where they feel cared for.</p>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <h2>Environmental Harmony</h2>
+              </div>
+              <div class="col-lg-8">
+                <p>We build spaces that offer care and well-being for every form of life on the planet and not just human beings. Our properties are designed to utilize natural light and air to the fullest, along with sustainable practices like an expansive green cover,  rainwater harvesting and groundwater recharging.</p>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <h2>Generosity</h2>
+              </div>
+              <div class="col-lg-8">
+                <p>We believe in the generosity of time, by planning from all angles before execution. We’re generous in our attention to detail, since it is the small things that contribute the most to the larger picture. We believe in the generosity of space by offering more green cover per person.</p>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <h2>Intentional Design</h2>
+              </div>
+              <div class="col-lg-8">
+                <p>Our design interventions are carefully crafted to promote a healthier lifestyle. We offer comfort with the right ergonomics, acoustics and thermal considerations. We ensure beauty in design by placing inspiring art at regular intervals. We encourage physical movement by offering wide, open, inviting spaces.</p>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <h2>Inclusivity</h2>
+              </div>
+              <div class="col-lg-8">
+                <p>As a company that believes in caring for our consumers, we ensure that nobody feels left out. Our spaces are designed for the well-being and free movement of all residents, irrespective of age, gender, ability and circumstances. </p>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <h2>Peace Of Mind</h2>
+              </div>
+              <div class="col-lg-8">
+                <p>Through safety and security powered by the best in class safety measures, we minimize worries for our customers. We intentionally select locations to offer supreme connectivity and convenience. We ensure the highest standards of cleanliness and sanitation through building management, even after handover. </p>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <h2>Belonging</h2>
+              </div>
+              <div class="col-lg-8">
+                <p>Each of our properties have specially designed amenities for engagement among residents and to promote social well-being. The amenities help our customers choose a happier, more active lifestyle. Our amenities almost always include a gym, separate areas for sporting and leisurely activities and multiple entertainment zones.</p>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <h2>Sustainability</h2>
+              </div>
+              <div class="col-lg-8">
+                <p>The use of sustainable materials, recycling everything that can be reused and careful resource conservation at every step of the way - these are habits that differentiate us from most other real estate companies.</p>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <h2>Food and Nurtition</h2>
+              </div>
+              <div class="col-lg-8">
+                <p>We care for the health and well-being of our customers by offering easy access to organic vegetables and biotic food sales. We also offer curated F&B options with extreme focus on quality and nutrition.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="svg-container-2">
+        <div class="events-wrap event-1" onclick="homePhilosophyContentScroll('pp-1', 200)">Scroll</div>
+        <div class="events-wrap event-2" onclick="homePhilosophyContentScroll('pp-2', 120)">Empathetic Hospitality</div>
+        <div class="events-wrap event-3" onclick="homePhilosophyContentScroll('pp-3', 0)">Environmental Harmony</div>
+        <div class="events-wrap event-4" onclick="homePhilosophyContentScroll('pp-4', 0)">Generosity</div>
+        <div class="events-wrap event-5" onclick="homePhilosophyContentScroll('pp-5', 0)">Intentional Design</div>
+        <div class="events-wrap event-6" onclick="homePhilosophyContentScroll('pp-6', 20)">Inclusivity</div>
+        <div class="events-wrap event-7" onclick="homePhilosophyContentScroll('pp-7', 20)">Peace Of Mind</div>
+        <div class="events-wrap event-8" onclick="homePhilosophyContentScroll('pp-8', 0)">Belonging</div>
+        <div class="events-wrap event-9" onclick="homePhilosophyContentScroll('pp-9', 0)">Sustainability</div>
+        <div class="events-wrap event-10" onclick="homePhilosophyContentScroll('pp-10', 0)">Food And Nutrition</div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="svg-bg" viewBox="0 0 1440 369" fill="none">
+
+          <path class="st0" d="M442.1,290.1c0,0,4.7,31.3-17.8,47.8c-22.5,16.5-57.1,9.6-60-0.3c-2.8-9.8,15.3-19.9,44-0.8
+            c12.5,8.3,27.9,13.3,43,13.2c10-0.1,32.4-6.9,20.2-20.9c-3.4-3.9-9.2-4.6-14.3-3.9c-9.5,1.2-19.2,2.5-28.7,4.4
+            c-32.3,6.5-26.9-39.6-26.9-39.6" />
+          <path class="st0" d="M485.8,40.7c-4.8-2.3-9.3-5.3-13.3-8.7c-5.3-4.5-10-10.9-8.9-17.6c0.9-5.4,5.8-9.9,11.4-10.4
+            c5.6-0.6,11.4,2.9,13.4,7.9c1.7-5.9,7.6-10.4,13.9-10.8c2.3-0.1,4.6,0.3,6.7,1.3c4.2,2.2,6.5,7.1,6.2,11.8c-0.3,4.7-2.8,9-6.1,12.4
+            c-3.6,3.7-8.2,6.5-11.7,10.2c-3.5,3.8-6.3,8.9-4.5,13.6c2.2,0.9,4.7,0.8,7,1.5c2.3,0.8,4.2,3.4,2.9,5.3c-0.7,1-2,1.3-3.2,1.6
+            c-5.6,1.1-11.4,0.8-16.7,2.8c-3.1,1.2-6.3,4.6-4.4,7.3c0.7,1,2,1.6,3.2,2c16.8,5.5,37-4.2,46.8-17.6c1.7-2.3,3.2-4.8,5.3-6.8
+            c2.1-2,5.1-3.4,8-2.8c0.5,0.1,1,0.3,1.4,0.6c1.1,0.8,1.1,2.5,0.7,3.8c-4.2,12-10.5,23.3-20.8,31.4c-10,8-22.9,12.6-35.9,12.9
+            c-7.2,0.2-14.5-1-21.7-0.8c-8.1,0.2-26.4,4.9-17,16.1c16.4,19.7,48.8,12.6,70.6,9.2c41.8-6.5,81.9-19.3,120.9-35.6
+            c17.5-7.3,37.7-8.3,55.9-2.8" />
+          <path class="st0" d="M477,52.3c-11-0.4-22.3-0.8-32.9,2.1c-29.4,8.2-29.3,45-56,56.4c-10.8,4.6-22.8,5.4-34.5,5.1
+            c-40.2-0.8-79.2-12.8-118.9-19.3c-67.7-11.2-227.4-8-293.8,9.4" />
+          <path class="st0" d="M690.2,101.2c-8.3,6.1-22.1,7.4-29.2-1.3c1.6,0.1,3.3,0.5,5,0.7c17.3,2.3,31.5-11.6,39.8-18.4
+            c13.2-10.9,25.2-21,43.2-10.5c4,2.3,7.3,5.9,9.2,10.1c0.8,1.8,0.8,3.4,1.2,5.3c-5.4-3.4-15-5.3-15.7,3.8c-0.2,2.6,0.7,5.2,2.3,7.3
+            c8.8,12.4,30.3,10.6,40.8,1.5c15.9-13.8,13.9-41.7-4.2-52.5c-15.5-9.2-37.5-2.6-45,13.8c0,0,24.5-0.7,28.2,22.8
+            c0.2,1.1,13.7,10,18.3,12.4c10.5,5.2,22.8,8,34.4,5.7c10.5-2.1,20.5-10.2,16.8-22c-1.1-3.5-3.6-6.6-7-7.9c-6.5-2.4-16.4,5.2-11,11.9
+            " />
+          <path class="st0" d="M660,99c15-19,34-7.7,34-7.7" />
+          <path class="st0" d="M690,101.3c-8.2,5.9-21.9,7.1-29-1.3" />
+          <path class="st0" d="M766,37v-9" />
+          <path class="st0" d="M746,42l-4-8" />
+          <path class="st0" d="M733,56l-8-5" />
+          <path class="st0" d="M798,56l8-5" />
+          <path class="st0" d="M785,42l4-8" />
+          <path class="st0" d="M82,351c6.3,0.7,12.3-3.2,16.8-7.7c4.5-4.5,8.4-9.8,13.9-13c9.3-5.6,22.5-3.6,29.7,4.4c2.1,2.4,3.8,5.2,6,7.4
+            c4.5,4.5,11.3,6.7,17.6,5.5" />
+          <path class="st0" d="M1331.4,293.9c0,0,21.4,0.3,29,4.1c7,3.4-52.2,27.8-79.3,3.2c-2.7-2.5-5.1-5.4-7.1-9c0,0,29.5-21.8,50.6,10.6
+            c0,0-17.5,4.8-34.6-7.4" />
+          <path class="st0" d="M1302,284.7c7.8-16.7,23.3-15.7,23.3-15.7s13.4,15.8-0.8,34" />
+          <path class="st0" d="M1320,279c0,0-5.2,7.5-6,13" />
+          <path class="st0" d="M184.4,354.1c-10.1-4.5-9.9-20.1-11.1-29.2c-2.2-16.8-11.8-19.5-25-28.6c-6.9-4.7-10.3-13.4-5.3-20.8
+            c4.2-6.3,13-9.8,20.3-7.3c8.3,2.8,14.1,12.6,10.5,21c-4.2,9.8-15.4,9.1-24.3,8.7c-5.9-0.3-11.7-0.4-17.6-0.2
+            c-5.5,0.1-11.2-0.2-15.7,3.5c-9.7,7.8-5.4,25.9,7.8,26.1c5.6,0.1,10.6-3.7,12.5-8.8c2.3-5.9-0.2-12.6-4.2-17.2
+            c-8.2-9.6-20.2-13.7-32.1-16.6c-9.4-2.3-18.8-7-18.9-17.9c-0.1-8.7,7-16.2,15.6-17c12.4-1.2,23,12.3,17,23.8
+            c-4.2,7.9-12.9,11.8-20.9,14.6c-18.6,6.4-24.5,19.9-25.5,38.3c-0.3,6.3-1.1,12.9-4.8,17.9c-8.9,12.1-52.7,1.2-52.7,1.2
+            s-46.3,2-69,6.4" />
+          <path class="st0" d="M480.3,317.6c-10.4-1-19.2-5.8-24.9-17c-6.5-12.7-10.4-22.6-26.4-25.8c-0.4-0.1-0.7-0.1-1.1-0.2
+            c-3.9-0.7-7.9-1.4-11.5-3c-2.5-1.1-4.9-2.8-6.7-4.9c-2.5-2.9-3.6-6.6-3.5-10.4c0.2-7.9,6.5-14.5,14.4-15.2
+            c10-0.9,18.4,7.9,17.2,17.6c-0.4,3.4-2,6.7-4.5,9.2c-2.7,2.7-6.4,4.3-10,5.5c-6.4,2.1-11.7,1.6-18.3,3.5c-10.2,3-15,11.1-17.4,18.3
+            c-0.7,2.2-1.1,4.4-2.1,6.5c-1,2-2.5,3.8-4.2,5.3c-16.9,14.3-39.4,2.6-58.6,3.8c-35.7,2.3-62.6,22.7-95,34.9c-9,3.4-23.5,10.1-35,10
+            c0,0-4.5,0.1-7.7-1.3" />
+          <path class="st0" d="M850,343.9l-3.8-2.1c-12.4-7.2-24.1-17.6-37.7-13c-0.3,0.1-0.6,0.1-0.9,0.1c-19.1,0.5-50.4,43.7-56.4,37.5
+            c-6.1-6.3,4.6-10.8,9-17.1c4.4-6.3-2.2-6.2-2.2-6.2h-43.3c-0.7,0-1.4-0.2-1.9-0.6c-4.9-3-1.7-5,0-5.8c0.5-0.2,1-0.3,1.5-0.3h23.1
+            c0.8,0,1.6-0.3,2.3-0.8c2.8-2.3,2.3-4.1,1.2-5.4c-1.1-1.2-2.7-1.7-4.3-1.7h-29.4c-0.7,0-1.3-0.2-1.9-0.5c-4.1-2.5-1.6-4.9-0.1-5.9
+            c0.6-0.4,1.3-0.6,2-0.6H749c1.7,0,3.3-1,3.9-2.6c0.5-1.5,0-2.6-0.7-3.5c-0.7-0.8-1.7-1.3-2.8-1.3h-37.6c-0.8,0-1.7-0.3-2.3-0.8
+            c-1.7-1.5-1-3.2-0.1-4.4c0.7-0.9,1.7-1.4,2.8-1.4H754c0.8,0,1.6-0.2,2.2-0.8c3.2-2.6,1.4-4.7,0.1-5.6c-0.6-0.4-1.3-0.6-2.1-0.6
+            c-5,0-27.8,0.2-32.5,0.2c-0.1,0-0.1,0-0.2,0c-3.4-0.1-4-5-0.6-5.9c7.1-1.8,22.2-1.2,25.1-1.2c1.1,0,2.1-0.2,2.8-0.4
+            c1.7-0.6,2.9-2.4,2.4-4.2c-0.7-2.7-4.4-2.9-4.4-2.9s-14.2,0-32.9,0s-15.9-1.5-15-4.3c0.9-2.8,14.1-11.9,11.1-18.6
+            c-3-6.7-20,11.5-41.3,29c-13.5,11.2-28.9,11.6-45,6.1c-17.3-5.9-34.7-11.1-53.1-7.9c-18.9,3.3-52.3,23.8-79.4,26.9
+            c0,0-4.8,1-10.4,0.3" />
+          <path class="st0" d="M1092.5,319.7l-5.6-0.4c-13.7,0.1-27.3,8-38.5,14.7c-48.9,29.4-63.8-20.8-66.4-31.9c-0.3-1.3-1.4-2.2-2.7-2.3
+            l-7.3-0.6c5.5-5.3,14.6-14.9,19.4-19.9c1.7-1.8,4.5-1.8,6.2,0c5.7,6.2,17.7,18.8,20.6,19.9h-10.1c-0.7,0-1,0.8-0.5,1.3l22.7,21.4
+            c1.6,1.5,4.1,1.4,5.6-0.3c4.7-5.3,14.2-16.1,18.5-20.6c0.6-0.6,0.1-1.6-0.8-1.6l-7.8,0.7c-0.9,0.1-1.8-0.6-1.9-1.5
+            c-2.1-10.8-16.3-71-66.8-27.9c-17.2,14.7-35.6,27.7-53.9,41c-16,11.7-33.6,30.8-53.5,35.5c-6.9,1.6-13.3-0.2-19.5-3.2" />
+          <path class="st0" d="M1280.9,301.6c-11.3,4.2-9.4,8.5-9.4,8.5s54.7,19.5,91.5-3.4c-0.5,0.3-0.6,8.7-0.7,9.6
+            c-1.8,10-4.9,18-12.8,24.8c-7.4,6.4-16.9,10.4-26.6,11.7c-17.2,2.2-30.1-5-44.9-12.7c-22.9-11.9-49.7-15.9-75.1-11.1
+            c-15.5,2.9-29.7,9.9-44.7,14.5c-11,3.4-33.4,9.6-42.7-0.7c-7.7-8.5-9.3-20.9-22.6-23.1" />
+          <path class="st0" d="M1212,90.4" />
+          <path class="st0" d="M1258.2,90.5" />
+          <path class="st0" d="M1203,95c0,0-0.5-7.7,8-5.2c0.7,0.1,1.3,0.2,2,0.2c5.5,0,10-4.5,10-10c0-5.5-4.4-9.6-9.9-9.6l-1.1,0.2
+            c-9.3,2-9-4.6-9-4.6v0v-9.6c0-4.6,3.6-8.4,8-8.4h7l1,0c0,0,4.6,0.2,4-6.2l0-1.9c0-0.4,0-0.8,0-1.2c0-5.9,4.5-10.7,10-10.7
+            s9.7,2.3,9.7,8.2l0,2c-1.5,11.3,5.3,9.8,5.3,9.8l1.1-0.1c4.7,0,8.4,3.6,8.4,8.1c0,2.3,0,5.8,0,8.9l-1,1c0,0-0.8,0-1.5,0
+            c-8,0-14.4,6.5-14.4,14.5s6.5,14.5,14.4,14.5c0.7,0,1.6,0,1.6,0l1,0v14.7c0,1.3,1.6,2.3,3.5,2.3s3.5-1,3.5-2.3V95c0,0,0.8-5.7-4.3-5
+            c-5.8,0.8-10.7-4.5-10.7-10c0-5.5,4.8-10,10.7-10c0.4,0,0.9,0,1.3,0.1l5.4-0.1c4.3,0.6,4-3.9,4-3.9v0v-9c0-4.4,3.7-8,8.3-8h7.7l-1,0
+            c0,0,6.6-0.3,4.6,9l-0.1,1.9c0,5.9,3.9,9.1,9.4,9.1s10-4.8,10-10.7l0.1-1.5c-0.3-8.4,5.9-7.8,5.9-7.8l-1,0h7.7c4.6,0,8.3,3.6,8.3,8
+            v8v-1c0,0-1.2,7.1,8.1,5.1l0-0.1c0.4,0,0.8,0,1.2,0c5.9,0,10.7,4.5,10.7,10c0,5.5-4.8,10-10.7,10c-0.4,0-0.9,0-1.3-0.1l1,0.5
+            c-9.3-2-9,4.6-9,4.6v-1v10.3c0,0,0.2,9.2,11.7,7.5c11.5-1.7,82.9-17.8,115.3-7.5" />
+          <path class="st0" d="M791,109.8c17.6,9.6,37,1.8,54.3-4.5c29.4-10.6,56.3-12.1,85.3-0.1c9.2,3.8,63.7,27.4,65.9,5.2
+            c1.9-19.6-3.6-42.7-19.8-55.2c-0.7-0.6-1.5-1.1-2.4-1.3c-0.9-0.2-2,0.2-2.3,1c-0.8,1.9,4.7,6.7,5.2,9c0.6,2.6-0.8,5.4-2.9,7.1
+            c-2.1,1.7-4.8,2.5-7.4,2.9c-7.9,1.3-16.5-0.5-22.6-5.7c-6.1-5.2-9.2-14.1-6.7-21.7c3.1-9.4,14.1-17,23.4-19.3
+            c12.8-3.2,34.4-0.7,41,12.4c0.6,1.2,1.1,2.5,1.2,3.9c0.4,3.7-2.2,7.4-5.7,8.9c-3.5,1.4-7.6,0.8-10.8-1c-16-9.3-5.2-31,9.1-35.2
+            c7.1-2.1,14.9-1.2,21.9,1.3c7.2,2.6,13.9,6.8,21.5,8c3.7,0.6,7.5,0.3,11.1,1.3c4.6,1.3,9.1,5.4,7,10.8c-0.4,1-1.1,2-1.9,2.8
+            c-3,3-7.2,3.8-11.1,4.5c-4.4,0.8-7.7,1.1-12,0.7c-4.4-0.4-9.2-0.9-13.1,1.7c-1.9,1.3-4.4,5.1-2.8,7.4c1.8,2.6,6.9,0.8,9.2,0
+            c9.3-3.3,20-4.5,28.6,0.2c4.5,2.5,8.3,7.3,7.3,12.3c-0.5,2.8-2.5,5.1-4.8,6.7c-2.3,1.6-5.1,2.4-7.8,3.1c-4.4,1.1-9.3,1.6-13.7,0.4
+            c-2.7-0.8-9.4-2.2-5.9-6.2c0.7-0.8,1.6-1.4,2.7-1.9l5.8-2.5c0.7-0.3,1.6-0.8,1.5-1.6c-0.1-0.5-0.5-0.9-1-1.1
+            c-1.7-0.8-3.8-0.2-5.5,0.6c-8.2,3.6-22,14-24,23.3c-0.9,4.3-0.4,11.5,1,15.7c9.5,29.4,59.7,10.5,79.7,9.2
+            c18.7-1.2,37.1,3.3,55.6,4.2c1.9,0.1,3.9,0.2,5.8,0.4c10.5,1.2,50.8,4.7,52.2-13.7l-0.1-8.2" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="svg-overlay" viewBox="0 0 1440 369" fill="none">
+
+          <path class="pp-7-1" d="M442.1,290.1c0,0,4.7,31.3-17.8,47.8c-22.5,16.5-57.1,9.6-60-0.3c-2.8-9.8,15.3-19.9,44-0.8
+              c12.5,8.3,27.9,13.3,43,13.2c10-0.1,32.4-6.9,20.2-20.9c-3.4-3.9-9.2-4.6-14.3-3.9c-9.5,1.2-19.2,2.5-28.7,4.4
+              c-32.3,6.5-26.9-39.6-26.9-39.6" />
+          <path class="pp-2" d="M485.8,40.7c-4.8-2.3-9.3-5.3-13.3-8.7c-5.3-4.5-10-10.9-8.9-17.6c0.9-5.4,5.8-9.9,11.4-10.4
+              c5.6-0.6,11.4,2.9,13.4,7.9c1.7-5.9,7.6-10.4,13.9-10.8c2.3-0.1,4.6,0.3,6.7,1.3c4.2,2.2,6.5,7.1,6.2,11.8c-0.3,4.7-2.8,9-6.1,12.4
+              c-3.6,3.7-8.2,6.5-11.7,10.2c-3.5,3.8-6.3,8.9-4.5,13.6c2.2,0.9,4.7,0.8,7,1.5c2.3,0.8,4.2,3.4,2.9,5.3c-0.7,1-2,1.3-3.2,1.6
+              c-5.6,1.1-11.4,0.8-16.7,2.8c-3.1,1.2-6.3,4.6-4.4,7.3c0.7,1,2,1.6,3.2,2c16.8,5.5,37-4.2,46.8-17.6c1.7-2.3,3.2-4.8,5.3-6.8
+              c2.1-2,5.1-3.4,8-2.8c0.5,0.1,1,0.3,1.4,0.6c1.1,0.8,1.1,2.5,0.7,3.8c-4.2,12-10.5,23.3-20.8,31.4c-10,8-22.9,12.6-35.9,12.9
+              c-7.2,0.2-14.5-1-21.7-0.8c-8.1,0.2-26.4,4.9-17,16.1c16.4,19.7,48.8,12.6,70.6,9.2c41.8-6.5,81.9-19.3,120.9-35.6
+              c17.5-7.3,37.7-8.3,55.9-2.8" />
+          <path class="pp-1" d="M477,52.3c-11-0.4-22.3-0.8-32.9,2.1c-29.4,8.2-29.3,45-56,56.4c-10.8,4.6-22.8,5.4-34.5,5.1
+              c-40.2-0.8-79.2-12.8-118.9-19.3c-67.7-11.2-227.4-8-293.8,9.4" />
+          <path class="pp-3" d="M690.2,101.2c-8.3,6.1-22.1,7.4-29.2-1.3c1.6,0.1,3.3,0.5,5,0.7c17.3,2.3,31.5-11.6,39.8-18.4
+              c13.2-10.9,25.2-21,43.2-10.5c4,2.3,7.3,5.9,9.2,10.1c0.8,1.8,0.8,3.4,1.2,5.3c-5.4-3.4-15-5.3-15.7,3.8c-0.2,2.6,0.7,5.2,2.3,7.3
+              c8.8,12.4,30.3,10.6,40.8,1.5c15.9-13.8,13.9-41.7-4.2-52.5c-15.5-9.2-37.5-2.6-45,13.8c0,0,24.5-0.7,28.2,22.8
+              c0.2,1.1,13.7,10,18.3,12.4c10.5,5.2,22.8,8,34.4,5.7c10.5-2.1,20.5-10.2,16.8-22c-1.1-3.5-3.6-6.6-7-7.9c-6.5-2.4-16.4,5.2-11,11.9
+              " />
+          <path class="pp-3" d="M660,99c15-19,34-7.7,34-7.7" />
+          <path class="pp-3" d="M690,101.3c-8.2,5.9-21.9,7.1-29-1.3" />
+          <path class="pp-3" d="M766,37v-9" />
+          <path class="pp-3" d="M746,42l-4-8" />
+          <path class="pp-3" d="M733,56l-8-5" />
+          <path class="pp-3" d="M798,56l8-5" />
+          <path class="pp-3" d="M785,42l4-8" />
+          <path class="pp-6-1" d="M82,351c6.3,0.7,12.3-3.2,16.8-7.7c4.5-4.5,8.4-9.8,13.9-13c9.3-5.6,22.5-3.6,29.7,4.4c2.1,2.4,3.8,5.2,6,7.4
+              c4.5,4.5,11.3,6.7,17.6,5.5" />
+          <path class="pp-10-1" d="M1331.4,293.9c0,0,21.4,0.3,29,4.1c7,3.4-52.2,27.8-79.3,3.2c-2.7-2.5-5.1-5.4-7.1-9c0,0,29.5-21.8,50.6,10.6
+              c0,0-17.5,4.8-34.6-7.4" />
+          <path class="pp-10-1" d="M1302,284.7c7.8-16.7,23.3-15.7,23.3-15.7s13.4,15.8-0.8,34" />
+          <path class="pp-10-1" d="M1320,279c0,0-5.2,7.5-6,13" />
+          <path class="pp-6" d="M184.4,354.1c-10.1-4.5-9.9-20.1-11.1-29.2c-2.2-16.8-11.8-19.5-25-28.6c-6.9-4.7-10.3-13.4-5.3-20.8
+              c4.2-6.3,13-9.8,20.3-7.3c8.3,2.8,14.1,12.6,10.5,21c-4.2,9.8-15.4,9.1-24.3,8.7c-5.9-0.3-11.7-0.4-17.6-0.2
+              c-5.5,0.1-11.2-0.2-15.7,3.5c-9.7,7.8-5.4,25.9,7.8,26.1c5.6,0.1,10.6-3.7,12.5-8.8c2.3-5.9-0.2-12.6-4.2-17.2
+              c-8.2-9.6-20.2-13.7-32.1-16.6c-9.4-2.3-18.8-7-18.9-17.9c-0.1-8.7,7-16.2,15.6-17c12.4-1.2,23,12.3,17,23.8
+              c-4.2,7.9-12.9,11.8-20.9,14.6c-18.6,6.4-24.5,19.9-25.5,38.3c-0.3,6.3-1.1,12.9-4.8,17.9c-8.9,12.1-52.7,1.2-52.7,1.2
+              s-46.3,2-69,6.4" />
+          <path class="pp-7" d="M480.3,317.6c-10.4-1-19.2-5.8-24.9-17c-6.5-12.7-10.4-22.6-26.4-25.8c-0.4-0.1-0.7-0.1-1.1-0.2
+              c-3.9-0.7-7.9-1.4-11.5-3c-2.5-1.1-4.9-2.8-6.7-4.9c-2.5-2.9-3.6-6.6-3.5-10.4c0.2-7.9,6.5-14.5,14.4-15.2
+              c10-0.9,18.4,7.9,17.2,17.6c-0.4,3.4-2,6.7-4.5,9.2c-2.7,2.7-6.4,4.3-10,5.5c-6.4,2.1-11.7,1.6-18.3,3.5c-10.2,3-15,11.1-17.4,18.3
+              c-0.7,2.2-1.1,4.4-2.1,6.5c-1,2-2.5,3.8-4.2,5.3c-16.9,14.3-39.4,2.6-58.6,3.8c-35.7,2.3-62.6,22.7-95,34.9c-9,3.4-23.5,10.1-35,10
+              c0,0-4.5,0.1-7.7-1.3" />
+          <path class="pp-8" d="M850,343.9l-3.8-2.1c-12.4-7.2-24.1-17.6-37.7-13c-0.3,0.1-0.6,0.1-0.9,0.1c-19.1,0.5-50.4,43.7-56.4,37.5
+              c-6.1-6.3,4.6-10.8,9-17.1c4.4-6.3-2.2-6.2-2.2-6.2h-43.3c-0.7,0-1.4-0.2-1.9-0.6c-4.9-3-1.7-5,0-5.8c0.5-0.2,1-0.3,1.5-0.3h23.1
+              c0.8,0,1.6-0.3,2.3-0.8c2.8-2.3,2.3-4.1,1.2-5.4c-1.1-1.2-2.7-1.7-4.3-1.7h-29.4c-0.7,0-1.3-0.2-1.9-0.5c-4.1-2.5-1.6-4.9-0.1-5.9
+              c0.6-0.4,1.3-0.6,2-0.6H749c1.7,0,3.3-1,3.9-2.6c0.5-1.5,0-2.6-0.7-3.5c-0.7-0.8-1.7-1.3-2.8-1.3h-37.6c-0.8,0-1.7-0.3-2.3-0.8
+              c-1.7-1.5-1-3.2-0.1-4.4c0.7-0.9,1.7-1.4,2.8-1.4H754c0.8,0,1.6-0.2,2.2-0.8c3.2-2.6,1.4-4.7,0.1-5.6c-0.6-0.4-1.3-0.6-2.1-0.6
+              c-5,0-27.8,0.2-32.5,0.2c-0.1,0-0.1,0-0.2,0c-3.4-0.1-4-5-0.6-5.9c7.1-1.8,22.2-1.2,25.1-1.2c1.1,0,2.1-0.2,2.8-0.4
+              c1.7-0.6,2.9-2.4,2.4-4.2c-0.7-2.7-4.4-2.9-4.4-2.9s-14.2,0-32.9,0s-15.9-1.5-15-4.3c0.9-2.8,14.1-11.9,11.1-18.6
+              c-3-6.7-20,11.5-41.3,29c-13.5,11.2-28.9,11.6-45,6.1c-17.3-5.9-34.7-11.1-53.1-7.9c-18.9,3.3-52.3,23.8-79.4,26.9
+              c0,0-4.8,1-10.4,0.3" />
+          <path class="pp-9" d="M1092.5,319.7l-5.6-0.4c-13.7,0.1-27.3,8-38.5,14.7c-48.9,29.4-63.8-20.8-66.4-31.9c-0.3-1.3-1.4-2.2-2.7-2.3
+              l-7.3-0.6c5.5-5.3,14.6-14.9,19.4-19.9c1.7-1.8,4.5-1.8,6.2,0c5.7,6.2,17.7,18.8,20.6,19.9h-10.1c-0.7,0-1,0.8-0.5,1.3l22.7,21.4
+              c1.6,1.5,4.1,1.4,5.6-0.3c4.7-5.3,14.2-16.1,18.5-20.6c0.6-0.6,0.1-1.6-0.8-1.6l-7.8,0.7c-0.9,0.1-1.8-0.6-1.9-1.5
+              c-2.1-10.8-16.3-71-66.8-27.9c-17.2,14.7-35.6,27.7-53.9,41c-16,11.7-33.6,30.8-53.5,35.5c-6.9,1.6-13.3-0.2-19.5-3.2" />
+          <path class="pp-10" d="M1280.9,301.6c-11.3,4.2-9.4,8.5-9.4,8.5s54.7,19.5,91.5-3.4c-0.5,0.3-0.6,8.7-0.7,9.6
+              c-1.8,10-4.9,18-12.8,24.8c-7.4,6.4-16.9,10.4-26.6,11.7c-17.2,2.2-30.1-5-44.9-12.7c-22.9-11.9-49.7-15.9-75.1-11.1
+              c-15.5,2.9-29.7,9.9-44.7,14.5c-11,3.4-33.4,9.6-42.7-0.7c-7.7-8.5-9.3-20.9-22.6-23.1" />
+          <path class="pp-5" d="M1203,95c0,0-0.5-7.7,8-5.2c0.7,0.1,1.3,0.2,2,0.2c5.5,0,10-4.5,10-10c0-5.5-4.4-9.6-9.9-9.6l-1.1,0.2
+              c-9.3,2-9-4.6-9-4.6v0v-9.6c0-4.6,3.6-8.4,8-8.4h7l1,0c0,0,4.6,0.2,4-6.2l0-1.9c0-0.4,0-0.8,0-1.2c0-5.9,4.5-10.7,10-10.7
+              s9.7,2.3,9.7,8.2l0,2c-1.5,11.3,5.3,9.8,5.3,9.8l1.1-0.1c4.7,0,8.4,3.6,8.4,8.1c0,2.3,0,5.8,0,8.9l-1,1c0,0-0.8,0-1.5,0
+              c-8,0-14.4,6.5-14.4,14.5s6.5,14.5,14.4,14.5c0.7,0,1.6,0,1.6,0l1,0v14.7c0,1.3,1.6,2.3,3.5,2.3s3.5-1,3.5-2.3V95c0,0,0.8-5.7-4.3-5
+              c-5.8,0.8-10.7-4.5-10.7-10c0-5.5,4.8-10,10.7-10c0.4,0,0.9,0,1.3,0.1l5.4-0.1c4.3,0.6,4-3.9,4-3.9v0v-9c0-4.4,3.7-8,8.3-8h7.7l-1,0
+              c0,0,6.6-0.3,4.6,9l-0.1,1.9c0,5.9,3.9,9.1,9.4,9.1s10-4.8,10-10.7l0.1-1.5c-0.3-8.4,5.9-7.8,5.9-7.8l-1,0h7.7c4.6,0,8.3,3.6,8.3,8
+              v8v-1c0,0-1.2,7.1,8.1,5.1l0-0.1c0.4,0,0.8,0,1.2,0c5.9,0,10.7,4.5,10.7,10c0,5.5-4.8,10-10.7,10c-0.4,0-0.9,0-1.3-0.1l1,0.5
+              c-9.3-2-9,4.6-9,4.6v-1v10.3c0,0,0.2,9.2,11.7,7.5c11.5-1.7,82.9-17.8,115.3-7.5" />
+          <path class="pp-4" d="M791,109.8c17.6,9.6,37,1.8,54.3-4.5c29.4-10.6,56.3-12.1,85.3-0.1c9.2,3.8,63.7,27.4,65.9,5.2
+              c1.9-19.6-3.6-42.7-19.8-55.2c-0.7-0.6-1.5-1.1-2.4-1.3c-0.9-0.2-2,0.2-2.3,1c-0.8,1.9,4.7,6.7,5.2,9c0.6,2.6-0.8,5.4-2.9,7.1
+              c-2.1,1.7-4.8,2.5-7.4,2.9c-7.9,1.3-16.5-0.5-22.6-5.7c-6.1-5.2-9.2-14.1-6.7-21.7c3.1-9.4,14.1-17,23.4-19.3
+              c12.8-3.2,34.4-0.7,41,12.4c0.6,1.2,1.1,2.5,1.2,3.9c0.4,3.7-2.2,7.4-5.7,8.9c-3.5,1.4-7.6,0.8-10.8-1c-16-9.3-5.2-31,9.1-35.2
+              c7.1-2.1,14.9-1.2,21.9,1.3c7.2,2.6,13.9,6.8,21.5,8c3.7,0.6,7.5,0.3,11.1,1.3c4.6,1.3,9.1,5.4,7,10.8c-0.4,1-1.1,2-1.9,2.8
+              c-3,3-7.2,3.8-11.1,4.5c-4.4,0.8-7.7,1.1-12,0.7c-4.4-0.4-9.2-0.9-13.1,1.7c-1.9,1.3-4.4,5.1-2.8,7.4c1.8,2.6,6.9,0.8,9.2,0
+              c9.3-3.3,20-4.5,28.6,0.2c4.5,2.5,8.3,7.3,7.3,12.3c-0.5,2.8-2.5,5.1-4.8,6.7c-2.3,1.6-5.1,2.4-7.8,3.1c-4.4,1.1-9.3,1.6-13.7,0.4
+              c-2.7-0.8-9.4-2.2-5.9-6.2c0.7-0.8,1.6-1.4,2.7-1.9l5.8-2.5c0.7-0.3,1.6-0.8,1.5-1.6c-0.1-0.5-0.5-0.9-1-1.1
+              c-1.7-0.8-3.8-0.2-5.5,0.6c-8.2,3.6-22,14-24,23.3c-0.9,4.3-0.4,11.5,1,15.7c9.5,29.4,59.7,10.5,79.7,9.2
+              c18.7-1.2,37.1,3.3,55.6,4.2c1.9,0.1,3.9,0.2,5.8,0.4c10.5,1.2,50.8,4.7,52.2-13.7l-0.1-8.2" />
+        </svg>
+      </div>
+      <div class="skip-button">
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3V256v41.7L52.5 440.6zM256 352V256 128 96c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29V352z"/></svg></div>
+        <div class="label">Skip Ahead</div>
+    </div>
+    </div>
+  </section>
+  <section class="home-project-slider">
+    <div class="svg-container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.11 385.13">
+        <path d="m1.09,384.1C102.17,276.93,147.52,138.59,142.19.06" fill="none" stroke="#f47920" stroke-width="3" />
+      </svg>
+    </div>
+    <div class="container">
+      <h2 class="text-center">Projects</h2>
+      <div class="tab-head">
+        <ul>
+          <li><a href="javascript:;" class="active" data-category="all">All</a></li>
+          <li><a href="javascript:;" data-category="residential">Residential</a></li>
+          <li><a href="javascript:;" data-category="commercial">Commercial</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="slider-wrap">
+      <div class="slides residential">
+        <div class="wrap">
+          <div class="image"><img src="img/project-1.jpg" class="img-fluid" alt=""></div>
+          <div class="label">222 Rajpur, Dehradun</div>
+        </div>
+      </div>
+      <div class="slides residential">
+        <div class="wrap">
+          <div class="image"><img src="img/project-2.jpg" class="img-fluid" alt=""></div>
+          <div class="label">Estate 128, Dehradun</div>
+        </div>
+      </div>
+      <div class="slides commercial">
+        <div class="wrap">
+          <div class="image"><img src="img/project-3.jpg" class="img-fluid" alt=""></div>
+          <div class="label">Max House, OKHLA</div>
+        </div>
+      </div>
+      <div class="slides commercial">
+        <div class="wrap">
+          <div class="image"><img src="img/project-4.jpg" class="img-fluid" alt=""></div>
+          <div class="label">Max Square, NOIDA</div>
+        </div>
+      </div>
+      <div class="slides commercial">
+        <div class="wrap">
+          <div class="image"><img src="img/project-5.jpg" class="img-fluid" alt=""></div>
+          <div class="label">Max Towers, NOIDA</div>
+        </div>
+      </div>
+    </div>
+    <div class="svg-container-2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.74 333.51">
+        <path d="m31.52,332.98C-8.43,228-9.19,106.67,33.34.56" fill="none" stroke="#f47920" stroke-width="3" />
+      </svg>
+    </div>
+  </section>
+  <section class="home-testimonial">
+    <div class="container">
+      <h2 class="text-center">Customer Testimonials</h2>
+      <p class="title-sub-head">As a company we firmly believe in our core offerings of Sevabhav, Excellence and Credibility, and leave no stone unturned in making our customers feel safe, secure and cared for in all of our spaces.</p>
+      <div class="testimonial-slider">
+        <div class="slides">
+          <div class="image">
+            <div class="img">
+              <img src="img/testimonial-img-1.jpg" alt="">
+            </div>
+            <div class="video-icon"></div>
+            <a href="img/testimonial-1.mp4" data-img="img/testimonial-img-1.jpg" class="stretched-link"></a>
+            <a href="img/testimonial-1.mp4" data-lity class="stretched-link lity-click hidden"></a>
+          </div>
+          <div class="description">
+            <p class="excerpt">Max Towers is an obvious choice for any organization that believes in quality. And for us, it was very much the same story. Perhaps the cleanest air quality of any building in...</p>
+            <p class="fulltext">Max Towers is an obvious choice for any organization that believes in quality. And for us, it was very much the same story. Perhaps the cleanest air quality of any building in the NCR region, and great facilities that are demanded by a young and highly skilled workforce. It's the sort of building that makes you feel better about the place that you work, the moment you enter the building. And in some ways has an effect on your calmness, your motivation levels, and really pride it where you work. Location wise also, it's very convenient. All the key landmarks, particularly the high court, the supreme Court, places like Connaught Place, Bhikaji Kama, etc., are all very easily reachable, so it literally ticks all the boxes for us.</p>
+            <div class="user-name">BHARAT ANAND</div>
+            <div class="user-designation">Partner Khaitan & Co</div>
+          </div>
+        </div>
+        <div class="slides">
+          <div class="image">
+            <div class="img">
+              <img src="img/testimonial-img-2.jpg" alt="">
+            </div>
+            <div class="video-icon"></div>
+            <a href="img/testimonial-2.mp4" data-img="img/testimonial-img-2.jpg" class="stretched-link"></a>
+            <a href="img/testimonial-2.mp4" data-lity class="stretched-link lity-click hidden"></a>
+          </div>
+          <div class="description">
+            <p class="excerpt">So we already have moved in to the Max Towers building in October 2019. We are among the very first tenants of this building. When we chose to move here, we wanted...</p>
+            <p class="fulltext">So we already have moved in to the Max Towers building in October 2019. We are among the very first tenants of this building. When we chose to move here, we wanted obviously a place that reflects the value of the book, which is around sustainability. We were very first impressed by the vision Max showed in developing this project, and their care in terms of creating an environment where people work where together, and people live well together in a sustainable environment. Up to now, my group has absolutely lived to the standard, and we are extremely happy of our new office. The team, the operation team is extremely supportive, very active in any event or any issue. They deliver upon the promise are made to create a work well environment altogether.</p>
+            <div class="user-name">GUILLAUME DOURDIN</div>
+            <div class="user-designation">CEO & Representative Director
+              Veolia Japan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="home-news-and-media">
+    <div class="svg-container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1155.94 1937.15">
+        <path d="m831.1,1935.66C-384.26,1758.54-96.22,327.58,624.94,327.58h235.5c188.21,0,279.42-153.28,294-327.45" fill="none" stroke="#f47920" stroke-width="4" />
+      </svg>
+    </div>
+    <div class="container">
+      <h2 class="text-center">News and Media</h2>
+      <p class="title-sub-head">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae.</p>
+      <div class="news-grid-wrap">
+        <div class="slides">
+          <div class="wrap">
+            <div class="image"><img src="img/news-thumb-home-1.jpg" alt=""></div>
+            <div class="description">
+              <div class="title">1Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi..</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque ...</p>
+              <a href="javascript:;" class="btn btn-primary rounded-pill shadow-none">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="slides">
+          <div class="wrap">
+            <div class="image"><img src="img/news-thumb-home-1.jpg" alt=""></div>
+            <div class="description">
+              <div class="title">2Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi..</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque ...</p>
+              <a href="javascript:;" class="btn btn-primary rounded-pill shadow-none">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="slides">
+          <div class="wrap">
+            <div class="image"><img src="img/news-thumb-home-1.jpg" alt=""></div>
+            <div class="description">
+              <div class="title">3Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi..</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque ...</p>
+              <a href="javascript:;" class="btn btn-primary rounded-pill shadow-none">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="slides">
+          <div class="wrap">
+            <div class="image"><img src="img/news-thumb-home-1.jpg" alt=""></div>
+            <div class="description">
+              <div class="title">4Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi..</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque ...</p>
+              <a href="javascript:;" class="btn btn-primary rounded-pill shadow-none">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="slides">
+          <div class="wrap">
+            <div class="image"><img src="img/news-thumb-home-1.jpg" alt=""></div>
+            <div class="description">
+              <div class="title">5Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi..</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque ...</p>
+              <a href="javascript:;" class="btn btn-primary rounded-pill shadow-none">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="news-grid-thumb-wrap">
+        <div class="slides">
+          <div class="wrap">
+            <div class="image"><img src="img/news-thumb-home-2.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class="slides">
+          <div class="wrap">
+            <div class="image"><img src="img/news-thumb-home-3.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class="slides">
+          <div class="wrap">
+            <div class="image"><img src="img/news-thumb-home-4.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class="slides">
+          <div class="wrap">
+            <div class="image"><img src="img/news-thumb-home-3.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="svg-container">
+      <svg viewBox="0 0 1440 287" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-7.89288 188.306C136.03 62.1095 199.676 8.36993 391 2.5C632.506 -4.90954 820.542 296.834 1085 285C1305 275.156 1292.5 73 1447.5 44" stroke="#F47920" stroke-width="2.5" fill="none" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="wrap">
+        <div class="row">
+          <div class="col">
+            <div class="logo">
+              <div class="logo">
+                <svg viewBox="0 0 119 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.601 0.157425L20.9609 5.74598C23.2878 7.79249 23.9858 10.7048 23.9858 13.4597C23.9858 20.3077 17.0829 23.5349 14.7561 29.1234C14.058 30.619 13.5927 32.508 13.7478 34.2397C13.7478 34.9481 14.2131 37.6243 15.0663 37.7817C21.1161 39.1199 26.0024 34.8694 23.9858 28.1002C23.5204 26.2111 23.1326 25.5027 22.2795 24.322H22.5897L28.9497 29.9893C30.2682 31.3274 30.9663 32.5868 30.9663 34.3971C31.4316 39.907 27.0107 44 22.1243 44C19.9526 44 18.2463 43.2916 16.9278 42.1109L9.71463 35.6565C7.54293 33.7674 7 31.5635 7 28.6512C7 22.1968 12.1966 18.576 14.3683 12.9875C15.3766 10.7835 15.6868 8.57961 15.6868 6.13954C15.6868 4.25045 15.6868 1.73166 14.3683 0L14.601 0.157425Z" class="white-svg-fill" />
+                  <path d="M30.3058 49.0763C30.3058 49.0763 37.4504 55.1797 38 55.7274L37.686 55.8839C35.6446 54.1625 33.0537 53.3017 30.2273 53.1452C27.4793 52.9887 24.9669 53.8495 22.376 54.7102C21.1983 55.0232 20.1777 55.5709 19 56.0404C17.2727 56.7447 15.4669 57.2142 13.7397 56.9012C10.9917 56.5882 8.47934 54.5537 6.28099 52.6757L0 47.2765L0.314049 47.12C4.08264 49.1545 7.45868 50.1718 11.8554 49.4675C13.5826 49.311 20.0207 46.2593 21.905 46.1028C23.2397 45.9463 24.2603 45.9463 25.5165 46.2593C27.7149 46.8853 28.7355 47.746 30.3058 49.0763Z" class="white-svg-fill" />
+                  <path d="M117.281 32.9231C116.101 32.7692 115.551 32.0769 114.056 30.0769L107.056 20.2308L112.483 12.9231C112.955 12.0769 114.371 11.7692 115.393 11.6154C116.101 11.4615 116.258 10.7692 116.258 10.4615H108.551C108.551 10.6154 108.551 11.3077 109.416 11.6154C110.281 11.9231 110.753 12.6154 109.966 13.7692L105.876 19.0769L102.494 13.9231C101.315 12.2308 101.944 11.7692 103.045 11.6154C103.753 11.4615 103.91 10.7692 103.91 10.4615H93.6854C93.6854 10.6154 93.6854 11.3077 94.5506 11.6154C95.5731 11.7692 96.4382 12.4615 97.3034 13.6154L103.124 22.1538L97.4607 29.6154C96.4382 31.1538 95.9663 31.7692 95.2585 32.3077C94.5506 32.8462 93.9214 32.4615 93.5281 32.3077C92.8203 31.8462 92.3483 31 91.9551 30C90.618 26.8462 86.1349 15.6923 83.9326 10H81.5731C78.5056 17.5385 73.8652 28.4615 72.6854 31C71.9776 32.3077 70.7978 33 69.7753 33C69.7753 33 67.0225 33.4615 66.7079 31.4615C66.7079 31.1538 66.7079 30.6154 66.7079 29.9231V14.7692C66.7079 12.7692 67.4157 11.7692 69.3034 11.4615C70.1686 11.3077 70.1686 10.3077 70.1686 10.3077H63.5618L54.045 27.7692L45.1573 10.2308H38C38 10.2308 38 11.2308 38.7079 11.2308C40.0449 11.3846 41.3034 11.9231 41.4607 14.2308V28.9231C41.4607 29.7692 41.3034 30.6154 41.3034 31.0769C41.1461 31.9231 40.5955 32.3846 39.4157 32.5385C38.3933 32.6923 38.3933 33.5385 38.3933 33.6923H46.2584V33.5385C46.2584 33.2308 46.1011 32.6923 45.236 32.5385C44.0562 32.3846 43.5056 31.8462 43.3483 31.0769C43.191 30.3846 43.191 29.7692 43.191 28.9231V16.3846L51.8427 33.9231H52.7079L61.5955 17.0769H61.7528V29.9231C61.7528 30.7692 61.7528 31.3846 61.5955 31.9231C61.4382 32.4615 60.7303 32.6154 59.8652 32.7692C59 33.0769 59 33.7692 59 33.9231H66.3146H67.1798H69.5393H69.854H76.6967C76.6967 33.9231 76.6967 33.0769 75.6742 32.7692C74.809 32.4615 74.4944 31.6154 74.9663 30.4615L76.5394 26.4615H85.5843L87.1573 30.4615C87.6292 31.6154 87.4719 32.4615 86.6068 32.7692C85.5843 33.0769 85.5843 33.7692 85.5843 33.9231H93.0562H93.2135H93.5281H94.8652H95.0225H95.3371H99.7416C99.7416 33.9231 99.8989 33.0769 98.7191 32.6154C98.0113 32.4615 98.0113 31.4615 99.1911 29.9231L103.989 23.4615L108.944 30.3077C110.124 32.1538 109.652 32.6154 108.787 32.8462C107.921 33.1538 107.921 33.8462 107.921 34H117.989C117.989 33.9231 118.146 33.2308 117.281 32.9231ZM77.0899 24.9231L81.0225 15.0769L84.5618 24.9231H77.0899Z" class="white-svg-fill" />
+                  <path d="M39 42H44V43.5929H40.5942V45.823H43.3478V47.3363H40.5942V49.2478H44V51H39V42Z" class="white-svg-fill" />
+                  <path d="M56.8378 43.8305C56.8378 43.8305 54.8919 43.678 54.1622 43.678C53.2703 43.678 52.7838 43.9831 52.7838 44.517C52.7838 45.0508 53.1081 45.3559 54.5676 45.8136C56.5135 46.5 57 46.8051 57 48.3305C57 50.161 56.1081 51 53.8378 51C52.6216 51 51 50.6949 51 50.6949L51.1622 49.1695C51.1622 49.1695 52.9459 49.322 53.8378 49.322C54.7297 49.322 55.4595 49.1695 55.4595 48.3305C55.4595 47.8729 54.8919 47.6441 53.6757 47.1864C51.7297 46.5 51 45.8898 51 44.517C51 42.839 52.0541 42 54.1622 42C55.3784 42 57 42.3051 57 42.3051L56.8378 43.8305Z" class="white-svg-fill" />
+                  <path d="M63 42H69V43.7522H66.9474V51H65.2895V43.7522H63V42Z" class="white-svg-fill" />
+                  <path d="M76.8876 42H80.1124L82 51H80.2697L79.9551 49.4867H77.0449L76.7303 51H75L76.8876 42ZM77.4382 47.7345H79.6405L78.7753 43.5929H78.2247L77.4382 47.7345Z" class="white-svg-fill" />
+                  <path d="M88 42H94V43.7522H91.7895V51H90.0526V43.7522H88V42Z" class="white-svg-fill" />
+                  <path d="M101 42H106V43.5929H102.522V45.823H105.348V47.3363H102.522V49.2478H106V51H101V42Z" class="white-svg-fill" />
+                  <path d="M118.838 43.8305C118.838 43.8305 116.892 43.678 116.162 43.678C115.27 43.678 114.784 43.9831 114.784 44.517C114.784 45.0508 115.108 45.3559 116.568 45.8136C118.514 46.5 119 46.8051 119 48.3305C119 50.161 118.108 51 115.838 51C114.622 51 113 50.6949 113 50.6949L113.162 49.1695C113.162 49.1695 114.946 49.322 115.838 49.322C116.73 49.322 117.459 49.1695 117.459 48.3305C117.459 47.8729 116.892 47.6441 115.676 47.1864C113.73 46.5 113 45.8898 113 44.517C113 42.839 114.054 42 116.162 42C117.378 42 119 42.3051 119 42.3051L118.838 43.8305Z" class="white-svg-fill" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row link-block">
+          <div class="links col-lg-7">
+            <a href="javascript:;">Home</a>
+            <a href="javascript:;">About Us</a>
+            <a href="javascript:;">Our Philosophy</a>
+            <a href="javascript:;">Projects</a>
+            <a href="javascript:;">Commercial Projects</a>
+            <a href="javascript:;">Residential Projects</a>
+            <a href="javascript:;">Downloads</a>
+            <a href="javascript:;">Blogs</a>
+            <a href="javascript:;">Leadership Team</a>
+            <a href="javascript:;">News and Media</a>
+            <a href="javascript:;">Sustainability</a>
+            <a href="javascript:;">Investor</a>
+            <a href="javascript:;">Careers</a>
+            <a href="javascript:;">Contact With Us</a>
+            <a href="javascript:;">Privacy Policy</a>
+            <a href="javascript:;">Cookie Policy</a>
+            <a href="javascript:;">Sitemap</a>
+            <a href="javascript:;">Disclaimer</a>
+          </div>
+          <div class="col-lg-5 mt-4 mt-lg-0">
+            <div class="subscribe-wrap">
+              <input type="email" class="input shadow-none" placeholder="Share your email for regular updates">
+              <button class="submit rounded-pill">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-lg-2 row-cols-1 flex-row-reverse">
+          <div class="col mb-2 mb-lg-0">
+            <div class="social-icons-wrap">
+              <ul>
+                <li><a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                    </svg></a></li>
+                <li><a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                    </svg></a></li>
+                <li><a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                    </svg></a></li>
+                <li><a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col copyright-text text-center text-lg-start">&copy;Copyright Max Estates Limited
+            <script>document.write(new Date().getFullYear())</script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal fade" id="listing-update-popup" data-bs-backdrop="static" aria-hidden="false" aria-labelledby="listing-update-popup" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="close" data-bs-dismiss="modal"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 5.026L12.026 0L14 1.974L8.974 7L14 12.026L12.026 14L7 8.974L1.974 14L0 12.026L5.026 7L0 1.974L1.974 0L7 5.026Z" />
+      </svg>
+  </div>
+        <div class="modal-body text-center">
+            <h3 class="h3">Max Ventures & Industries Limited is now listed on the stock exchanges as Max Estates Limited</h3>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.7.0.min.js"><\/script>')</script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/DrawSVGPlugin.min.js"></script>
+  <script src="js/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js" integrity="sha512-UU0D/t+4/SgJpOeBYkY+lG16MaNF8aqmermRIz8dlmQhOlBnw6iQrnt4Ijty513WB3w+q4JO75IX03lDj6qQNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home-animation.js"></script>
+  <script src="js/footer-animation.js"></script>
+  <script>
+    
+    $(window).on('load', function() {
+        let _listing_update_popup = localStorage.getItem('listing_update_popup');
+
+        $('#listing-update-popup .close').on('click', function(){
+          localStorage.setItem('listing_update_popup', true);
+        });
+
+        if(!_listing_update_popup){
+          $('#listing-update-popup').modal('show');
+        }
+    });
+  </script>
+</body>
+
+</html>

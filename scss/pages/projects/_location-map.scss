@@ -1,0 +1,110 @@
+.location-map{
+    padding: 15vh 0 5vh 0;
+    h3{
+        margin-bottom: 1.5rem;
+    }
+    .map-wrapper{
+        position: relative;
+        border-radius: 0.9rem;
+        overflow: hidden;
+        .map{
+            position: relative;
+            padding-top: 56.6%;
+            @include mobile{
+                padding-top: 140%;
+            }
+            iframe{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .image-slider-wrap{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+            .image-slider{
+                .flickity-slider{
+                    display: flex;
+                    align-items: flex-end;
+                    .slides{
+                        position: relative;
+                        padding: 0 5px;
+                        width: 200px;
+                        height: 190px;
+                        display: flex;
+                        align-items: flex-end;
+                        @include mobile{
+                            width: 50%;
+                            height: 130px;
+                        }
+                        .wrap{
+                            background: #FFF8F6;
+                            border-radius: 0.8rem;
+                            padding: 0.8rem;
+                            height: 100%;
+                            transition: $base-transition;
+                            .image{
+                                height: 120px;
+                                overflow: hidden;
+                                @include mobile{
+                                    height: 80px;
+                                }
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                            .title{
+                                text-align: center;
+                                font-size: 0.8rem;
+                                padding: 0.5rem 0;
+                                height: 50px;
+                                @include mobile{
+                                    height: 40px;
+                                }
+                            }
+                        }
+                        &.is-selected{
+                            height: 210px;
+                            @include mobile{
+                                height: 150px;
+                            }
+                            .wrap{
+                                background: $brown;
+                                color: #FFF8F6;
+                                .image{
+                                    height: 140px;
+                                    @include mobile{
+                                        height: 80px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.blue{
+                    .flickity-slider{
+                        .slides{
+                            .wrap{
+                                background: #F9F9FF;
+                                color: #001B3E;
+                            }
+                            &.is-selected{
+                                .wrap{
+                                    background: #002F64;
+                                    color: #D6E3FF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
